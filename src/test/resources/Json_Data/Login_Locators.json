@@ -1,0 +1,5 @@
+{
+  "Continue_Button" : "//android.widget.Button[@content-desc=\"Continue\"]",
+  "Allow_Location" : "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\"]"
+}
+

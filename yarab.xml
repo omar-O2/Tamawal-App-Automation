@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="omar">
+    <parameter name="platform" value="android">
+
+    </parameter>
+
+
+
+    <test name="asd">
+        <classes>
+            <class name="Login_FLow_Test">
+
+                <methods>
+                    <include name="Valid_Login_With_NationalID">
+
+                    </include>
+                </methods>
+
+
+
+
+
+
+
+
+
+
+            </class>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </classes>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </test>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>
