@@ -30,7 +30,7 @@ public class Order_Flow_Test extends TestBase {
     @Test //TODO: When user is logged in to app for first time after registration
     public void Valid_Order_Flow() throws FileNotFoundException, InterruptedException {
          new Walkthrough(driver).Press_Start_Discovery_Button();
-        new Walkthrough(driver).Press_Lets_Begin_Button1();
+        new Walkthrough(driver).Press_Lets_Begin_Button();
         new Walkthrough(driver).Press_On_Salary_Field();
         new Walkthrough(driver).Enter_Salary("20000");
         new Walkthrough(driver).Press_Next_Button();

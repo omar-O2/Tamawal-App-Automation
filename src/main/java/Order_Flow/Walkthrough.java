@@ -36,7 +36,7 @@ public class Walkthrough {
     }
 
 
-    public void Press_Lets_Begin_Button1(){
+    public void Press_Lets_Begin_Button(){
 
         Utility.Click_On_Element(driver, Lets_Begin_Button);
     }
