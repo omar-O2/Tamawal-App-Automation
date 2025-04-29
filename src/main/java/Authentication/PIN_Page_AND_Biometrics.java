@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 
 public class PIN_Page_AND_Biometrics {
     public AppiumDriver driver;
+    private final By Set_PIN_Button= By.xpath("//android.widget.Button[@content-desc=\"Set your password\"]");
     private final By Number_One = By.xpath("//android.view.View[@content-desc=\"1\"]");
     private final By Number_Two = By.xpath("//android.view.View[@content-desc=\"2\"]");
     private final By Number_Three = By.xpath("//android.view.View[@content-desc=\"3\"]");
@@ -40,6 +41,11 @@ public class PIN_Page_AND_Biometrics {
         Utility.Click_On_Element(driver, Number_Zero);
         return this;
     }
+    public PIN_Page_AND_Biometrics Press_On_Set_PIN_Button(){
+        Utility.Click_On_Element(driver, Set_PIN_Button);
+        return this;
+    }
+
 
     public PIN_Page_AND_Biometrics Press_Number_One(){
         Utility.Click_On_Element(driver, Number_One);

@@ -22,6 +22,9 @@ public class Registration {
     private final By Join_Now_Button = By.xpath("//android.widget.Button[@content-desc=\"Join Now\"]");
     private final By Terms_And_Conditions_Check_Box = By.xpath("//android.widget.ImageView");
     private final By Go_To_Nafath_Button = By.xpath("//android.widget.Button[@content-desc=\"Go to nafath app\"]");
+    private final By Tamawal_Contract_Checkbox_1 = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]");
+    private final By Tamawal_Contract_Checkbox_2 = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[2]");
+
 
 
 
@@ -101,11 +104,21 @@ public class Registration {
         return this;
     }
 
-    public Registration Return_To_App() {
+    public PIN_Page_AND_Biometrics Return_To_App() {
         Utility.Return_To_Previous_App(driver, "sa.tamawal.capp");
-    return this;
+    return new PIN_Page_AND_Biometrics(driver);
     }
 
+    public Registration Press_On_Tamawal_Contract_Checkbox_1() throws InterruptedException {
+        Thread.sleep(2000);
+        Utility.Click_On_Element(driver, Tamawal_Contract_Checkbox_1);
+        return this;
+    }
+    public Registration Press_On_Tamawal_Contract_Checkbox_2() throws InterruptedException {
+        Thread.sleep(2000);
+        Utility.Click_On_Element(driver, Tamawal_Contract_Checkbox_2);
+        return this;
+    }
 
 
 

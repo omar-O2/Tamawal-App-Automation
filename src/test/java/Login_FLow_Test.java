@@ -1,4 +1,5 @@
 import Authentication.OTP;
+import Authentication.Registration;
 import Order_Flow.Accurate_Results;
 import Order_Flow.Application_Data;
 import Order_Flow.Payment;
@@ -14,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 
-public class Login_FLow_Test extends AppiumInitializer {
+public class Login_FLow_Test extends TestBase {
 
     @BeforeMethod
     public void Reach_Login() throws InterruptedException, FileNotFoundException {
@@ -31,8 +32,8 @@ public class Login_FLow_Test extends AppiumInitializer {
 
     @Test(priority = 1)
    public void Valid_Login_With_NationalID() throws InterruptedException, FileNotFoundException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button().Press_Number_One().Press_Number_Two()
+                .Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         Thread.sleep(3000);
          Assert.assertEquals(
                 driver.findElements(By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]")).isEmpty(),
