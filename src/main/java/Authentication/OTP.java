@@ -26,8 +26,9 @@ public class OTP {
         this.driver = driver;
     }
 
-    public void Press_On_OTP_Field(){
+    public OTP Press_On_OTP_Field(){
         Utility.Click_On_Element(driver,OTP_Field);
+        return this;
     }
 
     public void Enter_OTP(){

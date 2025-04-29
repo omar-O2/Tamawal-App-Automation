@@ -1,4 +1,5 @@
 import Authentication.Login_Flow_Page;
+import Authentication.OTP;
 import Authentication.Registration;
 import Pages.Allow_Notification_Popup;
 import Pages.TestBase;
@@ -18,17 +19,18 @@ public class Registration_Test extends TestBase {
 
 
 
-        new Registration(driver).Press_Allow_Location();
+        new Allow_Notification_Popup(driver).Press_Allow_Button();
         new Registration(driver).Press_Continue_Button();
         new Registration(driver).Press_Allow_Location();
         new Registration(driver).Press_Skip_Button();
         new Registration(driver).Press_Join_Button();
     }
 
-
+@Test
         public void Valid_Registration_With_NationalID() throws FileNotFoundException, InterruptedException {
-            new Registration(driver).Press_On_NationalID().Enter_NationalID("1005530090").Press_On_Title().Press_Continue_Button().Press_On_Mobile_Number_Field().Enter_Mobile_Number("516161616");
-            Thread.sleep(3000);
+            new Registration(driver).Press_On_NationalID().Enter_NationalID("1011111166").Press_On_Title_Login().Press_Continue_Button().Press_On_Mobile_Number_Field();
+new Registration(driver).Enter_Mobile_Number("512345678").Press_On_Title_Registration().Press_On_Join_Now_Button().Press_On_Terms_And_Conditions_Check_Box().Press_Continue_Button();
+new OTP(driver).Press_On_OTP_Field().Enter_OTP();new Registration(driver).Press_Continue_Button().Press_On_Go_To_Nafath_Button().Return_To_App();
             Assert.assertEquals(
                     driver.findElements(By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]")).isEmpty(),
                     false,
