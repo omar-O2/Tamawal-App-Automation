@@ -1,4 +1,5 @@
 import Authentication.OTP;
+import Authentication.PIN_Page_AND_Biometrics;
 import Authentication.Registration;
 import Order_Flow.Accurate_Results;
 import Order_Flow.Application_Data;
@@ -31,11 +32,11 @@ public class Login_FLow_Test extends TestBase {
 
 
     @Test(priority = 1)
-   public void Valid_Login_With_NationalID() throws InterruptedException, FileNotFoundException {
+    public void Valid_Login_With_NationalID() throws InterruptedException, FileNotFoundException {
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button().Press_Number_One().Press_Number_Two()
                 .Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         Thread.sleep(3000);
-         Assert.assertEquals(
+        Assert.assertEquals(
                 driver.findElements(By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]")).isEmpty(),
                 false,
                 "No EditText elements found"
@@ -51,6 +52,7 @@ public class Login_FLow_Test extends TestBase {
 
     }
 
+
     @Test(priority = 3)
     public void Enter_Valid_NationalID() throws InterruptedException, FileNotFoundException {
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID("1005530090").Press_On_Title().Press_Continue_Button();
@@ -65,6 +67,21 @@ public class Login_FLow_Test extends TestBase {
     }
 
 
+    @Test(priority = 4)
+    public void Valid_Login_With_NationalID_New_Phone() throws InterruptedException, FileNotFoundException {
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        Thread.sleep(3000);
+        Assert.assertEquals(
+                driver.findElements(By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]")).isEmpty(),
+                true,
+                "No EditText elements found"
+        );
+
+
+    }
+
     @Test(priority = 2)
     public void Enter_Invalid_NationalID() throws InterruptedException, FileNotFoundException {
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID("1005560090").Press_On_Title().Press_Continue_Button();
@@ -77,6 +94,7 @@ public class Login_FLow_Test extends TestBase {
 
 
     }
+
     /*@AfterMethod
     public void resetApp() {
         try {

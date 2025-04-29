@@ -95,7 +95,8 @@ public class Registration {
         Utility.Click_On_Element(driver, Join_Now_Button);
         return this;
     }
-    public Registration Press_On_Terms_And_Conditions_Check_Box() {
+    public Registration Press_On_Terms_And_Conditions_Check_Box() throws InterruptedException {
+        Thread.sleep(2000);
         Utility.Click_On_Element(driver, Terms_And_Conditions_Check_Box);
         return this;
     }
@@ -114,8 +115,7 @@ public class Registration {
         Utility.Click_On_Element(driver, Tamawal_Contract_Checkbox_1);
         return this;
     }
-    public Registration Press_On_Tamawal_Contract_Checkbox_2() throws InterruptedException {
-        Thread.sleep(5000);
+    public Registration Press_On_Tamawal_Contract_Checkbox_2() {
         Utility.Click_On_Element(driver, Tamawal_Contract_Checkbox_2);
         return this;
     }
