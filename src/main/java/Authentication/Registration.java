@@ -110,12 +110,12 @@ public class Registration {
     }
 
     public Registration Press_On_Tamawal_Contract_Checkbox_1() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         Utility.Click_On_Element(driver, Tamawal_Contract_Checkbox_1);
         return this;
     }
     public Registration Press_On_Tamawal_Contract_Checkbox_2() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         Utility.Click_On_Element(driver, Tamawal_Contract_Checkbox_2);
         return this;
     }
