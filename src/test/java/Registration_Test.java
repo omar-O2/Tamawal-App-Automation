@@ -15,6 +15,9 @@ public class Registration_Test extends TestBase {
     @BeforeMethod
     public void Reach_Login() throws InterruptedException, FileNotFoundException {
 
+
+
+
         new Registration(driver).Press_Allow_Location();
         new Registration(driver).Press_Continue_Button();
         new Registration(driver).Press_Allow_Location();
