@@ -5,6 +5,7 @@ import Pages.AppiumInitializer;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -78,6 +79,20 @@ public class Utility {
                     androidDriver.quit();
                 }
             }
+        }
+    }
+    public static void Return_To_Previous_App(AppiumDriver driver, String appPackage) {
+        try {
+            // Cast the driver to AndroidDriver (if using Android)
+            if (driver instanceof AndroidDriver) {
+                AndroidDriver androidDriver = (AndroidDriver) driver;
+                androidDriver.activateApp(appPackage); // Activate the previous app
+                System.out.println("Returned to the previous app: " + appPackage);
+            } else {
+                System.out.println("This method is only supported for Android.");
+            }
+        } catch (Exception e) {
+            System.out.println("Failed to return to the previous app: " + e.getMessage());
         }
     }
 }

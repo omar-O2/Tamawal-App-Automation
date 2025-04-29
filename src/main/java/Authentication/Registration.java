@@ -15,9 +15,17 @@ public class Registration {
     private final By Skip_Button = By.xpath("//android.widget.Button[@content-desc=\"Skip\"]");
     private final By Join_Button = By.xpath("//android.widget.Button[@content-desc=\"Join\"]");
     private final By National_ID_Field = By.xpath("//android.widget.EditText");
-    private final By Continue_Button_Login = By.xpath("//android.widget.Button[@content-desc=\"Continue\"]");
-    private final By Mobile_Number_Field = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[4]/android.widget.EditText[2]");
-    private final By Title = By.xpath("//android.view.View[@content-desc=\"Log in or Sign up\"]");
+    private final By Mobile_Number_Field = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.widget.EditText[2]");
+    private final By Mobile_Number_Field_After_Press = By.xpath("//android.widget.ScrollView/android.widget.EditText[2]");
+    private final By Title_Login = By.xpath("//android.view.View[@content-desc=\"Log in or Sign up\"]");
+    private final By Title_Registration = By.xpath("//android.view.View[@content-desc=\"Welcome To\"]");
+    private final By Join_Now_Button = By.xpath("//android.widget.Button[@content-desc=\"Join Now\"]");
+    private final By Terms_And_Conditions_Check_Box = By.xpath("//android.widget.ImageView");
+    private final By Go_To_Nafath_Button = By.xpath("//android.widget.Button[@content-desc=\"Go to nafath app\"]");
+
+
+
+
 
     public Registration(AppiumDriver driver) throws FileNotFoundException {
         this.driver = driver;
@@ -60,8 +68,13 @@ public class Registration {
 
     }
 
-    public Registration Press_On_Title() {
-        Utility.Click_On_Element(driver, Title);
+    public Registration Press_On_Title_Login() {
+        Utility.Click_On_Element(driver, Title_Login);
+
+        return this;
+    }
+    public Registration Press_On_Title_Registration() {
+        Utility.Click_On_Element(driver, Title_Registration);
 
         return this;
     }
@@ -71,10 +84,30 @@ public class Registration {
         return this;
     }
 
-    public void Enter_Mobile_Number(String Mobile_Number) {
-       Utility.Send_Data(driver, Mobile_Number_Field, Mobile_Number);
-
+    public Registration Enter_Mobile_Number(String MobileNumber) {
+       Utility.Send_Data(driver, Mobile_Number_Field_After_Press, MobileNumber);
+        return this;
     }
+    public Registration Press_On_Join_Now_Button() {
+        Utility.Click_On_Element(driver, Join_Now_Button);
+        return this;
+    }
+    public Registration Press_On_Terms_And_Conditions_Check_Box() {
+        Utility.Click_On_Element(driver, Terms_And_Conditions_Check_Box);
+        return this;
+    }
+    public Registration Press_On_Go_To_Nafath_Button() {
+        Utility.Click_On_Element(driver, Go_To_Nafath_Button);
+        return this;
+    }
+
+    public Registration Return_To_App() {
+        Utility.Return_To_Previous_App(driver, "sa.tamawal.capp");
+    return this;
+    }
+
+
+
 
 
 
