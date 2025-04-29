@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 public class Walkthrough {
     public AppiumDriver driver;
     private final By Start_Discovery_Button = By.xpath("//android.widget.Button[@content-desc=\"Start Discovery\"]");
-    private final By Lets_Begin_Button1 = By.xpath("//android.widget.ImageView[@content-desc=\"Let's Begin\"]");
+    private final By Lets_Begin_Button = By.xpath("//android.widget.ImageView[@content-desc=\"Let's Begin\"]");
     private final By Salary_Field = By.xpath("//android.widget.EditText");
     private final By Next_Button = By.xpath("//android.widget.Button[@content-desc=\"Next\"]");
     private final By Select_Loan_Purpose = By.xpath("//android.widget.EditText");
@@ -38,7 +38,7 @@ public class Walkthrough {
 
     public void Press_Lets_Begin_Button1(){
 
-        Utility.Click_On_Element(driver, Lets_Begin_Button1);
+        Utility.Click_On_Element(driver, Lets_Begin_Button);
     }
 
     public void Press_On_Salary_Field(){
