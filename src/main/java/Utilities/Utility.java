@@ -95,11 +95,4 @@ public class Utility {
             System.out.println("Failed to return to the previous app: " + e.getMessage());
         }
     }
-    public static void scroll2ToText(AppiumDriver driver, String targetText) {
-        String scrollCommand =
-                "new UiScrollable(new UiSelector().scrollable(true))" +
-                        ".scrollIntoView(new UiSelector().description(\"" + targetText + "\"))";
-
-        driver.findElement(AppiumBy.androidUIAutomator(scrollCommand));
-    }
 }
