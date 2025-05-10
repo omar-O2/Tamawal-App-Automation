@@ -36,59 +36,81 @@ public class Payment {
     }
 
 
-    public void Press_On_Name_On_Card_Field(){
+    public Payment Press_On_Name_On_Card_Field(){
 
         Utility.Click_On_Element(driver, Name_On_Card_Field);
+        return this;
+
     }
-    public void Enter_Name_On_Card(String Name_On_Card){
+    public Payment Enter_Name_On_Card(String Name_On_Card){
 
         Utility.Send_Data(driver,Name_On_Card_Field, Name_On_Card);
+        return this;
+
     }
 
 
-    public void Press_On_Card_Number_Field(){
+    public Payment Press_On_Card_Number_Field(){
 
         Utility.Click_On_Element(driver, Card_Number_Field);
+        return this;
+
     }
-    public void Enter_Card_Number(String Card_Number){
+    public Payment Enter_Card_Number(String Card_Number){
 
         Utility.Send_Data(driver,Card_Number_Field, Card_Number);
+        return this;
+
     }
 
-    public void Press_On_Month_Of_Card(){
+    public Payment Press_On_Month_Of_Card(){
 
         Utility.Click_On_Element(driver, Month_Of_Card);
+        return this;
+
     }
-    public void Enter_Month_Of_Card(String Month_Card){
+    public Payment Enter_Month_Of_Card(String Month_Card){
 
         Utility.Send_Data(driver,Month_Of_Card, Month_Card);
+        return this;
+
     }
 
-    public void Press_On_CVV_Of_Card(){
+    public Payment Press_On_CVV_Of_Card(){
 
         Utility.Click_On_Element(driver, CVV_Of_Card);
+        return this;
+
     }
 
-    public void Enter_CVV_Of_Card(String Card_CVV){
+    public Payment Enter_CVV_Of_Card(String Card_CVV){
 
         Utility.Send_Data(driver,CVV_Of_Card, Card_CVV);
+        return this;
+
     }
 
-    public void Press_On_Pay_SAR_20_Button(){
+    public Payment Press_On_Pay_SAR_20_Button(){
 
         Utility.Click_On_Element(driver, Pay_SAR_20_Button);
+        return this;
+
 
     }
 
-    public void Press_On_Submit_Button(){
+    public Payment Press_On_Submit_Button(){
 
         Utility.Click_On_Element(driver, Submit_Button);
+        return this;
+
 
     }
 
-    public void Press_On_Continue_Button(){
+    public Accurate_Results Press_On_Continue_Button(){
 
         Utility.Click_On_Element(driver, Continue_Button);
+        return new Accurate_Results(driver);
+
 
     }
 

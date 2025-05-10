@@ -4,6 +4,8 @@ import Utilities.Utility;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.io.FileNotFoundException;
+
 public class Application_Data {
     public AppiumDriver driver;
     private final By Lets_Go_Button = By.xpath("//android.widget.Button[@content-desc=\"Ok, let’s go!\"]");
@@ -47,123 +49,169 @@ public class Application_Data {
         this.driver = driver;
     }
 
-    public void Press_On_Lets_Go_Button() {
+    public Application_Data Press_On_Lets_Go_Button() {
         Utility.Click_On_Element(driver, Lets_Go_Button);
+        return this;
+
     }
 
 
-    public void Press_On_Job_Information_Field() {
+    public Application_Data Press_On_Job_Information_Field() {
         Utility.Click_On_Element(driver, Job_Information_Field);
+        return this;
+
     }
 
-    public void Press_On_Yes_Button() throws InterruptedException {
+    public Application_Data Press_On_Yes_Button() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Yes_Button);
+        return this;
+
     }
 
-    public void Press_On_Next_Button() {
+    public Application_Data Press_On_Next_Button() {
         Utility.Click_On_Element(driver, Next_Button);
+        return this;
+
     }
 
-    public void Press_On_Sector_DDL() throws InterruptedException {
+    public Application_Data Press_On_Sector_DDL() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Sector_DDL);
+        return this;
+
 
     }
 
-    public void Enter_Sector_Data(String Sector) {
+    public Application_Data Enter_Sector_Data(String Sector) {
         Utility.Send_Data(driver, Sector_DDL, Sector);
         Utility.Click_On_Element(driver, Government_In_Sector_DDL);
+        return this;
+
 
     }
 
-    public void Press_On_Entity_DDL() throws InterruptedException {
+    public Application_Data Press_On_Entity_DDL() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Entity_DDL);
+        return this;
+
     }
 
-    public void Enter_Entity_Data(String Entity) {
+    public Application_Data Enter_Entity_Data(String Entity) {
         Utility.Send_Data(driver, Entity_DDL, Entity);
         Utility.Click_On_Element(driver, MinistryOfTransportation_In_Entity_DDL);
+        return this;
+
     }
 
-    public void Press_On_Job_DDL() throws InterruptedException {
+    public Application_Data Press_On_Job_DDL() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Entity_DDL);
+        return this;
+
     }
 
-    public void Enter_Job_Data(String Job) {
+    public Application_Data Enter_Job_Data(String Job) {
         Utility.Send_Data(driver, Job_DDL, Job);
         Utility.Click_On_Element(driver, Security_Man_In_Job_DDL);
+        return this;
+
     }
 
-    public void Press_On_City_DDL() throws InterruptedException {
+    public Application_Data Press_On_City_DDL() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, City_DDL);
+        return this;
+
     }
 
-    public void Enter_City_Data(String City) {
+    public Application_Data Enter_City_Data(String City) {
         Utility.Send_Data(driver, City_DDL, City);
         Utility.Click_On_Element(driver, Abha_In_City_DDL);
+        return this;
+
     }
 
 
-    public void Press_On_Bank_DDL() throws InterruptedException {
+    public Application_Data Press_On_Bank_DDL() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Bank_DDL);
+        return this;
+
     }
 
 
-    public void Enter_Bank_Data(String Bank) {
+    public Application_Data Enter_Bank_Data(String Bank) {
         Utility.Send_Data(driver, Job_DDL, Bank);
         Utility.Click_On_Element(driver, Alinma_In_Bank_DDL);
+        return this;
+
     }
 
 
-    public void Press_On_Hiring_Date_Field() throws InterruptedException {
+    public Application_Data Press_On_Hiring_Date_Field() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Date_Field);
+        return this;
+
     }
 
 
-    public void Choose_Date() throws InterruptedException {
+    public Application_Data Choose_Date() throws InterruptedException {
         Thread.sleep(2000);
         Utility.Click_On_Element(driver, Year_Button_Calender);
         Utility.Click_On_Element(driver, Year_2020);
+        return this;
+
 
     }
 
-    public void Press_Ok_In_Date() throws InterruptedException {
+    public Application_Data Press_Ok_In_Date() throws InterruptedException {
         Thread.sleep(2000);
 
         Utility.Click_On_Element(driver, OK_Button_In_Date_Field);
+        return this;
+
     }
 
-    public void Press_Ok_Confirm_Button() {
+    public Application_Data Press_Ok_Confirm_Button() {
         Utility.Scroll_Down(driver);
         Utility.Click_On_Element(driver, Ok_Confirm_Button);
+        return this;
+
     }
 
-    public void Press_Back_To_Summary_Button() {
+    public Application_Data Press_Back_To_Summary_Button() {
         Utility.Click_On_Element(driver, Back_To_Summary_Button);
+        return this;
+
     }
 
 
-    public void Press_On_Confirm_All_Data_Button() {
+    public Application_Data Press_On_Confirm_All_Data_Button() {
         Utility.Scroll_Down(driver);
         Utility.Click_On_Element(driver, Confirm_All_Data_Button);
+        return this;
+
     }
 
-    public void Press_On_Pay_Now_Button(){
+    public Application_Data Press_On_Pay_Now_Button(){
         Utility.Click_On_Element(driver, Pay_Now_Button);
+        return this;
+
     }
 
-    public void Press_Pay_With_Credit(){
+    public Payment Press_Pay_With_Credit() throws FileNotFoundException {
         Utility.Click_On_Element(driver, Pay_With_Credit);
+        return new Payment(driver);
+
     }
 
-    public void Press_On_TAMAWAL_Button() {
+    public Application_Data Press_On_TAMAWAL_Button() throws FileNotFoundException {
         Utility.Click_On_Element(driver, TAMAWAL_Button);
+        return this;
+
     }
 
 

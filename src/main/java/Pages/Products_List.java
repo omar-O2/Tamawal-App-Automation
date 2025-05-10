@@ -21,13 +21,17 @@ public class Products_List {
         this.driver = driver;
     }
 
-    public void Press_On_Home_Page_Icon(){
+    public Products_List Press_On_Home_Page_Icon(){
         Utility.Click_On_Element(driver, Home_Page_Icon);
+        return this;
+
     }
 
 
-    public void Press_On_Close_Compare_Tour_Guide_Icon(){
+    public Products_List Press_On_Close_Compare_Tour_Guide_Icon(){
         Utility.Click_On_Element(driver,
                 Close_Compare_Tour_Guide_Icon);
+        return this;
+
     }
 }

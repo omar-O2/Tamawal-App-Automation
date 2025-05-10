@@ -1,0 +1,22 @@
+{
+  "User1": {
+    "NationalID": "1005530090",
+    "Salary" : "200000",
+    "Preferred_Amount" : "33333",
+    "Sector" : "Government",
+    "Entity" : "Ministry of Transportation",
+    "Job" : "Security Jobs",
+    "City" : "Abha",
+    "Bank" : "Alinma"
+  },
+  "User2": {
+    "NationalID": "1005530090",
+    "Salary" : "200000",
+    "Preferred_Amount" : "33333",
+    "Sector" : "Government",
+    "Entity" : "Ministry of Transportation",
+    "Job" : "Security Jobs",
+    "City" : "Abha",
+    "Bank" : "Alinma"
+  }
+}
