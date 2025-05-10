@@ -1,5 +1,6 @@
 package Pages;
 
+import Order_Flow.Application_Data;
 import Utilities.Utility;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
@@ -19,8 +20,10 @@ public class Product_Details {
     }
 
 
-    public void Press_On_Tamawal_Button(){
+    public Application_Data Press_On_Tamawal_Button(){
         Utility.Click_On_Element(driver, Tamawal_Button);
+        return new Application_Data(driver);
+
     }
 
 

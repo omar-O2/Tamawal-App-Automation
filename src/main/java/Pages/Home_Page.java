@@ -32,8 +32,9 @@ public void Press_Start_Discovery_Button(){
     Utility.Click_On_Element(driver, Start_Discovery_Button);
 }
 
-public void Press_On_Details_Button(){
+public Product_Details Press_On_Details_Button(){
         Utility.Scroll_Down(driver);
         Utility.Click_On_Element(driver, Details_Button);
+        return new Product_Details(driver);
 }
 }

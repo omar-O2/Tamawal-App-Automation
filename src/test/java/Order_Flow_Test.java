@@ -23,14 +23,14 @@ public class Order_Flow_Test extends TestBase {
         new Login_Flow_Page(driver).Press_Allow_Location();
         new Login_Flow_Page(driver).Press_Skip_Button();
         new Login_Flow_Page(driver).Press_Join_Button();
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button().Press_Number_One().
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalID1")).Press_On_Title().Press_Continue_Button().Press_Number_One().
                 Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
 
     }
     @Test //TODO: When user is logged in to app for first time after registration
     public void Valid_Order_Flow() throws FileNotFoundException, InterruptedException {
          new Walkthrough(driver).Press_Start_Discovery_Button();
-        new Walkthrough(driver).Press_Lets_Begin_Button();
+         new Walkthrough(driver).Press_Lets_Begin_Button();
         new Walkthrough(driver).Press_On_Salary_Field();
         new Walkthrough(driver).Enter_Salary("20000");
         new Walkthrough(driver).Press_Next_Button();
@@ -45,8 +45,8 @@ public class Order_Flow_Test extends TestBase {
         new Walkthrough(driver).Enter_Preferred_Amount("367104");
         new Walkthrough(driver).Press_Credit_Limit_Title();
         new Walkthrough(driver).Press_Ok_And_Continue_Button();
-       new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-       new Products_List(driver).Press_On_Home_Page_Icon();
+        new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
+        new Products_List(driver).Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Application_Data(driver).Press_On_Lets_Go_Button();

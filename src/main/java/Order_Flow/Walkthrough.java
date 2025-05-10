@@ -36,53 +36,74 @@ public class Walkthrough {
     }
 
 
-    public void Press_Lets_Begin_Button(){
+    public Walkthrough Press_Lets_Begin_Button(){
 
         Utility.Click_On_Element(driver, Lets_Begin_Button);
+        return this;
     }
 
-    public void Press_On_Salary_Field(){
+    public Walkthrough Press_On_Salary_Field(){
 
         Utility.Click_On_Element(driver, Salary_Field);
+        return this;
+
     }
-    public void Press_On_Select_Loan_Purpose(){
+    public Walkthrough Press_On_Select_Loan_Purpose(){
 
         Utility.Click_On_Element(driver, Select_Loan_Purpose);
+        return this;
+
     }
-    public void Select_Home_Improvement(){
+    public Walkthrough Select_Home_Improvement(){
 
         Utility.Click_On_Element(driver, Loan_Purpose_DDL);
+        return this;
+
     }
 
 
-    public void Enter_Salary(String Amount){
+    public Walkthrough Enter_Salary(String Amount){
 
         Utility.Send_Data(driver, Salary_Field,Amount);
+        return this;
+
     }
-    public void Press_Next_Button(){
+    public Walkthrough Press_Next_Button(){
 
         Utility.Click_On_Element(driver, Next_Button);
+        return this;
+
     }
-    public void Press_No_Button(){
+    public Walkthrough Press_No_Button(){
 
         Utility.Click_On_Element(driver, No_Button);
+        return this;
+
     }
-    public void Press_Preferred_Amount_Field(){
+    public Walkthrough Press_Preferred_Amount_Field(){
 
         Utility.Click_On_Element(driver, Preferred_Amount_Field);
-        driver.findElement(Preferred_Amount_Field).clear();    }
-    public void Enter_Preferred_Amount(String Preferred_Amount){
+        driver.findElement(Preferred_Amount_Field).clear();
+        return this;
+    }
+    public Walkthrough Enter_Preferred_Amount(String Preferred_Amount){
 
         Utility.Send_Data(driver, Preferred_Amount_Field, Preferred_Amount);
+        return this;
+
     }
 
-    public void Press_Ok_And_Continue_Button(){
+    public Walkthrough Press_Ok_And_Continue_Button(){
 
         Utility.Click_On_Element(driver, Ok_And_Continue_Button);
+        return this;
+
     }
-    public void Press_Credit_Limit_Title(){
+    public Walkthrough Press_Credit_Limit_Title(){
 
         Utility.Click_On_Element(driver, Credit_Limit_Title);
+        return this;
+
     }
 
 
