@@ -78,7 +78,7 @@ public class Order_Flow_Test extends TestBase {
         new Application_Data(driver).Press_Back_To_Summary_Button();
         new Application_Data(driver).Press_On_Confirm_All_Data_Button();
          new Application_Data(driver).Press_On_Pay_Now_Button();
-        new Application_Data(driver).Press_On_TAMAWAL_Button();
+        //new Application_Data(driver).Press_On_TAMAWAL_Button();
         new Application_Data(driver).Press_Pay_With_Credit();
         new Payment(driver).Press_On_Name_On_Card_Field();
         new Payment(driver).Enter_Name_On_Card("Omar Radwan");
