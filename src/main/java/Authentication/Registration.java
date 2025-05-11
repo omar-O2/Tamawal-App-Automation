@@ -105,7 +105,7 @@ public class Registration {
         return this;
     }
 
-    public PIN_Page_AND_Biometrics Return_To_App() {
+    public PIN_Page_AND_Biometrics Return_To_App() throws FileNotFoundException {
         Utility.Return_To_Previous_App(driver, "sa.tamawal.capp");
     return new PIN_Page_AND_Biometrics(driver);
     }

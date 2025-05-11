@@ -13,15 +13,17 @@ import java.io.FileNotFoundException;
 public class Login_Flow_Page {
 
     public AppiumDriver driver;
-    private final By Continue_Button = By.xpath(Json_Data.Get_json_Data("Login_Locators"
+    //private final By Continue_Button = By.xpath(Json_Data.Get_json_Data("Login_Locators"
+          //  ,"Continue_Button"));
+    private final By Continue_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Login_Locators"
             ,"Continue_Button"));
-    //private final By Continue_wButton = AppiumBy.accessibilityId("ContinueLocation");
     private final By Allow_Location = By.xpath(Json_Data.Get_json_Data("Login_Locators", "Allow_Location"));
-    private final By Skip_Button = By.xpath("//android.widget.Button[@content-desc=\"Skip\"]");
-    private final By Join_Button = By.xpath("//android.widget.Button[@content-desc=\"Join\"]");
-    private final By National_ID_Field = By.xpath("//android.widget.EditText");
-    private final By Continue_Button_Login = By.xpath("//android.widget.Button[@content-desc=\"Continue\"]");
-    private final By Title = By.xpath("//android.view.View[@content-desc=\"Log in or Sign up\"]");
+    private final By Skip_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Login_Locators", "Skip_Button"));
+    private final By Join_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Login_Locators", "Join_Button"));
+    private final By National_ID_Field = By.xpath(Json_Data.Get_json_Data("Login_Locators", "National_ID_Field"));
+    private final By Continue_Button_Login = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Login_Locators"
+            ,"Continue_Button_Login"));
+    private final By Title = By.xpath(Json_Data.Get_json_Data("Login_Locators", "Title"));
 
 
 
@@ -38,7 +40,7 @@ public class Login_Flow_Page {
 
 
 
-    public PIN_Page_AND_Biometrics Press_Continue_Button() {
+    public PIN_Page_AND_Biometrics Press_Continue_Button() throws FileNotFoundException {
 
         Utility.Click_On_Element(driver, Continue_Button);
         return new PIN_Page_AND_Biometrics(driver);

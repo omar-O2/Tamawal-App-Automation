@@ -40,8 +40,7 @@ public class Engine_Test extends TestBase {
                 .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_On_Confirm_All_Data_Button().Press_On_Pay_Now_Button().Press_On_TAMAWAL_Button().Press_Pay_With_Credit()
                 .Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
-        new OTP(driver).Press_On_OTP_Field();
-        new OTP(driver).Enter_OTP();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
         Thread.sleep(3000);

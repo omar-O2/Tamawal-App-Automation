@@ -1,13 +1,17 @@
 package Authentication;
 
+import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.io.FileNotFoundException;
+
 public class OTP {
     public AppiumDriver driver;
-    private final By OTP_Field= By.xpath("//android.widget.EditText");
-    private final By Resend_Button= By.xpath("//android.widget.Button[@content-desc=\"Resend code?\"]");
+    private final By OTP_Field= By.xpath(Json_Data.Get_json_Data("OTP_locators", "OTP_Field"));
+    private final By Resend_Button= AppiumBy.accessibilityId(Json_Data.Get_json_Data("OTP_Locators", "Resend_Button"));
 
 
 
@@ -21,7 +25,7 @@ public class OTP {
 
 
 
-    public OTP (AppiumDriver driver){
+    public OTP (AppiumDriver driver) throws FileNotFoundException {
 
         this.driver = driver;
     }
@@ -31,8 +35,9 @@ public class OTP {
         return this;
     }
 
-    public void Enter_OTP(){
+    public OTP Enter_OTP(){
         Utility.Send_Data(driver,OTP_Field,"1234");
+        return this;
     }
 
 

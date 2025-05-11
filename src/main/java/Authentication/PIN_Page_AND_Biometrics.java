@@ -1,28 +1,41 @@
 package Authentication;
 
 import Pages.Home_Page;
+import Utilities.Json_Data;
 import Utilities.Utility;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.*;
 import org.openqa.selenium.By;
 
+import java.io.FileNotFoundException;
 
 
 public class PIN_Page_AND_Biometrics {
     public AppiumDriver driver;
-    private final By Set_PIN_Button= By.xpath("//android.widget.Button[@content-desc=\"Set your password\"]");
-    private final By Number_One = By.xpath("//android.view.View[@content-desc=\"1\"]");
-    private final By Number_Two = By.xpath("//android.view.View[@content-desc=\"2\"]");
-    private final By Number_Three = By.xpath("//android.view.View[@content-desc=\"3\"]");
-    private final By Number_Four = By.xpath("//android.view.View[@content-desc=\"4\"]");
-    private final By Number_Five = By.xpath("//android.view.View[@content-desc=\"5\"]");
-    private final By Number_Six = By.xpath("//android.view.View[@content-desc=\"6\"]");
-    private final By Number_Seven = By.xpath("//android.view.View[@content-desc=\"7\"]");
-    private final By Number_Eight = By.xpath("//android.view.View[@content-desc=\"8\"]");
-    private final By Number_Nine = By.xpath("//android.view.View[@content-desc=\"9\"]");
-    private final By Number_Zero= By.xpath("//android.view.View[@content-desc=\"0\"]");
-    private final By Enable_Biometrics_Button= By.xpath("//android.widget.Button[@content-desc=\"Enable\"]");
-    private final By Ignore_Biometrics_Button= By.xpath("//android.widget.Button[@content-desc=\"Ignore\"]");
+    private final By Set_PIN_Button= AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Set_PIN_Button"));
+    private final By Number_One = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_One"));
+    private final By Number_Two = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Two"));
+    private final By Number_Three = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Three"));
+    private final By Number_Four = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Four"));
+    private final By Number_Five = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Five"));
+    private final By Number_Six = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Six"));
+    private final By Number_Seven = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Seven"));
+    private final By Number_Eight = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Eight"));
+    private final By Number_Nine = AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Nine"));
+    private final By Number_Zero= AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
+            ,"Number_Zero"));
+    private final By Enable_Biometrics_Button= By.xpath(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics", "Enable_Biometrics_Button"));
+    private final By Ignore_Biometrics_Button= By.xpath(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics", "Ignore_Biometrics_Button"));;
 
 
 
@@ -33,7 +46,7 @@ public class PIN_Page_AND_Biometrics {
 
 
 
-    public PIN_Page_AND_Biometrics(AppiumDriver driver){
+    public PIN_Page_AND_Biometrics(AppiumDriver driver) throws FileNotFoundException {
         this.driver= driver;
     }
 

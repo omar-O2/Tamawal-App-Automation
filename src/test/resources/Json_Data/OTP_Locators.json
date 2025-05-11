@@ -1,0 +1,4 @@
+{
+"OTP_Field" : "//android.widget.EditText",
+  "Resend_Button" : "Resend code?"
+}
