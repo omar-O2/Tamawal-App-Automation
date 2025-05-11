@@ -26,7 +26,8 @@ public class OTP {
         this.driver = driver;
     }
 
-    public OTP Press_On_OTP_Field(){
+    public OTP Press_On_OTP_Field() throws InterruptedException {
+        Thread.sleep(2000);
         Utility.Click_On_Element(driver,OTP_Field);
         return this;
     }

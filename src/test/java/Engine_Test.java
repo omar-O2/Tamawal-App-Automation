@@ -1,5 +1,6 @@
 import Authentication.Login_Flow_Page;
 import Authentication.OTP;
+import Authentication.PIN_Page_AND_Biometrics;
 import Order_Flow.Accurate_Results;
 import Order_Flow.Walkthrough;
 import Pages.Allow_Notification_Popup;
@@ -29,8 +30,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_one_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User1.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User1.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+               new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User1.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User1.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
