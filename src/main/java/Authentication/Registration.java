@@ -2,6 +2,7 @@ package Authentication;
 
 import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
@@ -12,9 +13,9 @@ public class Registration {
     private final By Continue_Button = By.xpath(Json_Data.Get_json_Data("Login_Locators"
             , "Continue_Button"));
     private final By Allow_Location = By.xpath(Json_Data.Get_json_Data("Login_Locators", "Allow_Location"));
-    private final By Skip_Button = By.xpath("//android.widget.Button[@content-desc=\"Skip\"]");
-    private final By Join_Button = By.xpath("//android.widget.Button[@content-desc=\"Join\"]");
-    private final By National_ID_Field = By.xpath("//android.widget.EditText");
+    private final By Skip_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Login_Locators", "Skip_Button"));
+    private final By Join_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Login_Locators", "Join_Button"));
+    private final By National_ID_Field = By.xpath(Json_Data.Get_json_Data("Login_Locators", "National_ID_Field"));
     private final By Mobile_Number_Field = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.widget.EditText[2]");
     private final By Mobile_Number_Field_After_Press = By.xpath("//android.widget.ScrollView/android.widget.EditText[2]");
     private final By Title_Login = By.xpath("//android.view.View[@content-desc=\"Log in or Sign up\"]");
