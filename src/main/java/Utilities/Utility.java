@@ -37,13 +37,12 @@ public class Utility {
     }
     public static void Scroll_Down(AppiumDriver driver) {
 
+
             driver.findElement(AppiumBy.androidUIAutomator(
-                    "new UiScrollable(new UiSelector().scrollable(true))" +  // Must be scrollable
+                    "new UiScrollable(new UiSelector().scrollable(true))" +
                             ".setMaxSearchSwipes(10)" +
-                            ".scrollBackward()"));  // ← Changed to scrollBackward()
-
-    }
-
+                            ".scrollIntoView(new UiSelector().textContains(\"Congratulations!\"))"));
+        }
 
 
 
