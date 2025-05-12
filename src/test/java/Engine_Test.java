@@ -1,5 +1,6 @@
 import Authentication.Login_Flow_Page;
 import Authentication.OTP;
+import Authentication.PIN_Page_AND_Biometrics;
 import Order_Flow.Accurate_Results;
 import Order_Flow.Walkthrough;
 import Pages.Allow_Notification_Popup;
@@ -29,8 +30,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_one_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User1.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User1.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User1.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User1.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -58,8 +60,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Two_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User2.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User2.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User2.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User2.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -86,8 +89,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Three_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User3.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User3.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User3.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User3.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -115,8 +119,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Four_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User4.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User4.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User4.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User4.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -144,8 +149,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Five_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User5.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User5.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User5.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User5.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -173,8 +179,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Six_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User6.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User6.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User6.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User6.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -202,9 +209,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Seven_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User7.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
-        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User7.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
@@ -231,9 +238,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Eight_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User8.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
-        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User8.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User8.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User8.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User8.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
@@ -260,8 +267,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Nine_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User9.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User9.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User9.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User9.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -289,8 +297,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Ten_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User10.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User10.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User10.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User10.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -318,8 +327,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Eleven_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User11.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User11.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User11.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User11.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -347,8 +357,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twelve_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User12.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User12.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User12.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User12.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -376,8 +387,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirteen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User13.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User13.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User13.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User13.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -404,9 +416,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Fourteen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User14.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
-        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User14.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User14.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User14.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User14.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
@@ -433,8 +445,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Fifteen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User15.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User15.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User15.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User15.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -462,8 +475,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Sixteen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User16.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User16.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User16.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User16.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -491,8 +505,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Seventeen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User17.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User17.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User17.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User17.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -520,8 +535,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Eighteen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User18.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User18.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User18.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User18.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -549,8 +565,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Nineteen_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User19.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User19.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User19.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User19.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -578,8 +595,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User20.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User20.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User20.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User20.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -607,8 +625,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_one_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User21.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User21.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User21.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User21.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -636,8 +655,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_Two_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User22.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User22.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User22.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User22.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -665,8 +685,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_Three_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User23.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User23.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User23.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User23.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -694,9 +715,9 @@ public class Engine_Test extends TestBase {
     @Test
     //TODO: User salary equal and commitment equal and application data questions are
     public void User_Twenty_Four_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User24.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
-        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User24.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User24.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User24.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User24.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
@@ -723,9 +744,9 @@ public class Engine_Test extends TestBase {
     @Test
     //TODO: User salary equal and commitment equal and application data questions are
     public void User_Twenty_Five_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User25.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
-        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User25.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User25.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();        new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User25.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User25.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
@@ -752,8 +773,9 @@ public class Engine_Test extends TestBase {
     @Test
     //TODO: User salary equal and commitment equal and application data questions are
     public void User_Twenty_Six_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User26.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User26.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User26.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User26.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -781,8 +803,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_Seven_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User27.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User27.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User27.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User27.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -810,8 +833,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_Eight_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User28.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User28.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User28.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User28.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -839,8 +863,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Twenty_Nine_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User29.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User29.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User29.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User29.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -868,8 +893,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User30.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User30.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User30.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User30.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -897,8 +923,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_One_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User31.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User31.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User31.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User31.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -926,8 +953,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Two_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User32.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User32.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User32.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User32.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -955,8 +983,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Three_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User33.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User33.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User33.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User33.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -986,8 +1015,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Four_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User34.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User34.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User34.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User34.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1015,8 +1045,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Five_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User35.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User35.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User35.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User35.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1044,8 +1075,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Six_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User36.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User36.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User36.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User36.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1073,8 +1105,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Seven_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User37.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User37.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User37.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User37.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1102,8 +1135,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Eight_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User38.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User38.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User38.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User38.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1131,8 +1165,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Thirty_Nine_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User39.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User39.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User39.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User39.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1160,8 +1195,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User40.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User40.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User40.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User40.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1189,8 +1225,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_One_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User41.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User41.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User41.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User41.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1218,8 +1255,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Two_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User42.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User42.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User42.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User42.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1247,8 +1285,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Three_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User43.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User43.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User43.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User43.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1276,8 +1315,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Four_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User44.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User44.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User44.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User44.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1305,8 +1345,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Five_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User45.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User45.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User45.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User45.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1334,8 +1375,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Six_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User46.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User46.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User46.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User46.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1363,8 +1405,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Seven_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User47.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User47.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User47.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User47.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1393,8 +1436,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Eight_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User48.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User48.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User48.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User48.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1422,8 +1466,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Forty_Nine_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User49.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User49.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User49.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User49.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
@@ -1451,8 +1496,9 @@ public class Engine_Test extends TestBase {
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
     public void User_Fifty_Case() throws FileNotFoundException, InterruptedException {
-        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User50.NationalID")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
+        new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User50.NationalID")).Press_On_Title().Press_Continue_Button();
+        new OTP(driver).Press_On_OTP_Field().Enter_OTP();
+        new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User50.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User50.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
