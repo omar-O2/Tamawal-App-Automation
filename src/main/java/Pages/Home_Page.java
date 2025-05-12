@@ -37,7 +37,7 @@ public void Press_Start_Discovery_Button(){
 }
 
 public Product_Details Press_On_Details_Button() throws FileNotFoundException, InterruptedException {
-        //Utility.Scroll_Down(driver);
+        Utility.scrollToText(driver, "Licensed Financing Providers");
         Utility.Click_On_Element(driver, Details_Button);
         return new Product_Details(driver);
 }

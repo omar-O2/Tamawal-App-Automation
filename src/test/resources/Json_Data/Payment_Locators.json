@@ -1,4 +1,4 @@
 {
-  "Continue_Button" : "Continue"
+  "Continue_Button" : "//android.widget.Button[@content-desc=\"Continue\"]"
 
 }

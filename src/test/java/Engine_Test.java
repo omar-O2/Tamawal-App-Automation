@@ -33,15 +33,15 @@ public class Engine_Test extends TestBase {
     @Test
     public void User_one_Case() throws FileNotFoundException, InterruptedException {
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User1.NationalID")).Press_On_Title().Press_Continue_Button();
-       /*new OTP(driver).Press_On_OTP_Field().Enter_OTP();*/
+       //new OTP(driver).Press_On_OTP_Field().Enter_OTP();
         new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
-       /* new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User1.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
+        /*new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User1.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
                 .Press_Next_Button().Press_No_Button().Press_No_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User1.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();*/
-        /*new Home_Page(driver)./*Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
                 .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Job"))
                 .Press_On_Next_Button().Press_On_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User1.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_On_Confirm_All_Data_Button().Press_On_Pay_Now_Button().*/new Application_Data(driver).Press_Pay_With_Credit()
+                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_On_Confirm_All_Data_Button().Press_On_Pay_Now_Button().Press_Pay_With_Credit()
                 .Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
