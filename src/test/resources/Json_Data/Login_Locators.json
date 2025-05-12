@@ -1,5 +1,10 @@
 {
-  "Continue_Button" : "//android.widget.Button[@content-desc=\"Continue\"]",
-  "Allow_Location" : "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\"]"
+  "Continue_Button" : "Continue",
+  "Allow_Location" : "//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\"]",
+  "Skip_Button" : "Skip",
+  "Join_Button" : "Join",
+  "National_ID_Field" : "//android.widget.EditText",
+  "Continue_Button_Login" : "Continue",
+  "Title" : "//android.view.View[@content-desc=\"Log in or Sign up\"]"
 }
 
