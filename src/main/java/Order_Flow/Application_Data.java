@@ -43,7 +43,7 @@ public class Application_Data {
     private final By Confirm_All_Data_Button = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Confirm_All_Data_Button"));
     private final By Pay_Now_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_Now_Button"));;
     private final By Pay_With_Credit = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_With_Credit"));
-    private final By TAMAWAL_Button = By.xpath("//android.widget.Button[@content-desc=\"TAMAWAL\"]");
+    private final By TAMAWAL_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "TAMAWAL_Button"));
 
 
 

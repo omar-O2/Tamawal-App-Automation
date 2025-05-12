@@ -27,6 +27,7 @@
   "Confirm_All_Data_Button": "//android.widget.ScrollView/android.widget.ImageView[2]",
 "Pay_Now_Button" : "Pay Now!",
   "Pay_With_Credit" : "International / Credit Cards\\nInternational / Credit Cards",
+  "TAMAWAL_Button" : "TAMAWAL"
 
 
 
