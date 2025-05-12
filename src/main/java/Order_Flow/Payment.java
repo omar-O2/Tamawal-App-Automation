@@ -106,7 +106,7 @@ public class Payment {
 
     }
 
-    public Accurate_Results Press_On_Continue_Button(){
+    public Accurate_Results Press_On_Continue_Button() throws FileNotFoundException {
 
         Utility.Click_On_Element(driver, Continue_Button);
         return new Accurate_Results(driver);
