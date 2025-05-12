@@ -32,21 +32,45 @@ public class Utility {
         new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.visibilityOfElementLocated(locator));
         driver.findElement(locator).sendKeys(Text);
     }
-    public static void Scroll_Down(AppiumDriver driver) {
+   /* public static void Scroll_Down(AppiumDriver driver) {
 
 
         driver.findElement(AppiumBy.androidUIAutomator(
-                "new UiScrollable(new UiSelector().scrollable(true))" +
+                "new UiScrollable(new UiSelector().scrollable(false))" +
                         ".setMaxSearchSwipes(10)" +
                         ".scrollIntoView(new UiSelector().textContains(\"Congratulations!\"))"));
-    }
+    }*/
 
 
 
-    public static void scrollToText(AppiumDriver driver, String targetText) {
+    /*public static void scrollToText(AppiumDriver driver, String targetText) {
         String scrollCommand =
                 "new UiScrollable(new UiSelector().scrollable(true))" +
                         ".scrollIntoView(new UiSelector().description(\"" + targetText + "\"))";
+
+        driver.findElement(AppiumBy.androidUIAutomator(scrollCommand));
+    }*/
+    public static void Scroll_Down (AppiumDriver driver) {
+        for (int i = 0; i < 15; i++) { // Max 15 scroll attempts
+            try {
+                // Try scrolling forward
+                driver.findElement(AppiumBy.androidUIAutomator(
+                        "new UiScrollable(new UiSelector().scrollable(true))" +
+                                ".setMaxSearchSwipes(5)" +
+                                ".scrollForward()"));
+
+                // Small delay between scrolls
+                Thread.sleep(500);
+            }
+            catch (Exception e) {
+                break; // Stop if scroll fails
+            }
+        }
+    }
+    public static void scrollToText(AppiumDriver driver, String targetText) {
+        String scrollCommand =
+                "new UiScrollable(new UiSelector().scrollable(true))" +
+                        ".scrollIntoView(new UiSelector().descriptionContains(\"" + targetText + "\"))";
 
         driver.findElement(AppiumBy.androidUIAutomator(scrollCommand));
     }
