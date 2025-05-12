@@ -1,14 +1,17 @@
 package Pages;
 
+import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.io.FileNotFoundException;
+
 public class Products_List {
     public AppiumDriver driver;
-    private final By Home_Page_Icon = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView[1]");
-    private final By Close_Compare_Tour_Guide_Icon = By.xpath("//android.widget.ImageView[@content-desc=\"Comparison new feature \uD83D\uDC4B\n" +
-            "Would you like to walkthrough our product comparison feature?\"]/android.view.View[1]");
+    private final By Home_Page_Icon = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Products_List_Locators","Home_Page_Icon"));
+    private final By Close_Compare_Tour_Guide_Icon = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Products_List_Locators","Close_Compare_Tour_Guide_Icon"));
 
 
 
@@ -16,7 +19,7 @@ public class Products_List {
 
 
 
-    public Products_List(AppiumDriver driver){
+    public Products_List(AppiumDriver driver) throws FileNotFoundException {
 
         this.driver = driver;
     }

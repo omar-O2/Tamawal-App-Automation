@@ -1,14 +1,18 @@
 package Pages;
 
+import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+
+import java.io.FileNotFoundException;
 
 public class Home_Page {
     public AppiumDriver driver;
     private final By Logo_Tamawal = By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]");
-    private final By Start_Discovery_Button = By.xpath("//android.widget.Button[@content-desc=\"Start Discovery\"]");
-    private final By Details_Button = By.xpath("(//android.widget.ImageView[@content-desc=\"Details\"])[3]");
+    private final By Start_Discovery_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Start_Discovery_Button"));
+    private final By Details_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Details_Button"));
 
 
 
@@ -20,7 +24,7 @@ public class Home_Page {
 
 
 
-    public Home_Page(AppiumDriver driver){
+    public Home_Page(AppiumDriver driver) throws FileNotFoundException {
 
         this.driver= driver;
     }

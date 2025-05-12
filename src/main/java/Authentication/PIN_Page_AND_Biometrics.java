@@ -35,7 +35,7 @@ public class PIN_Page_AND_Biometrics {
     private final By Number_Zero= AppiumBy.accessibilityId(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics"
             ,"Number_Zero"));
     private final By Enable_Biometrics_Button= By.xpath(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics", "Enable_Biometrics_Button"));
-    private final By Ignore_Biometrics_Button= By.xpath(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics", "Ignore_Biometrics_Button"));;
+    private final By Ignore_Biometrics_Button= By.xpath(Json_Data.Get_json_Data("PIN_Page_AND_Biometrics", "Ignore_Biometrics_Button"));
 
 
 
@@ -97,11 +97,11 @@ public class PIN_Page_AND_Biometrics {
         Utility.Click_On_Element(driver, Number_Nine);
         return this;
     }
-    public Home_Page Press_Enable_Button(){
+    public Home_Page Press_Enable_Button() throws FileNotFoundException {
         Utility.Click_On_Element(driver, Enable_Biometrics_Button);
         return new Home_Page(driver) ;
     }
-    public Home_Page Press_Ignore_Button(){
+    public Home_Page Press_Ignore_Button() throws FileNotFoundException {
         Utility.Click_On_Element(driver, Ignore_Biometrics_Button);
         return new Home_Page(driver);
     }

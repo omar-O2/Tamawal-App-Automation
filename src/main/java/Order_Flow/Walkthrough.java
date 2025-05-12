@@ -1,22 +1,26 @@
 package Order_Flow;
 
+import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.io.FileNotFoundException;
+
 public class Walkthrough {
     public AppiumDriver driver;
-    private final By Start_Discovery_Button = By.xpath("//android.widget.Button[@content-desc=\"Start Discovery\"]");
-    private final By Lets_Begin_Button = By.xpath("//android.widget.ImageView[@content-desc=\"Let's Begin\"]");
+    private final By Start_Discovery_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Start_Discovery_Button"));
+    private final By Lets_Begin_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Lets_Begin_Button"));
     private final By Salary_Field = By.xpath("//android.widget.EditText");
-    private final By Next_Button = By.xpath("//android.widget.Button[@content-desc=\"Next\"]");
+    private final By Next_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Next_Button"));
     private final By Select_Loan_Purpose = By.xpath("//android.widget.EditText");
-    private final By Loan_Purpose_DDL = By.xpath("//android.view.View[@content-desc=\"Home Improvement\"]");
-    private final By Yes_Button = By.xpath("//android.view.View[@content-desc=\"Yes\"]");
-    private final By No_Button = By.xpath("//android.view.View[@content-desc=\"No\"]");
+    private final By Loan_Purpose_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Loan_Purpose_DDL"));
+    private final By Yes_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Yes_Button"));
+    private final By No_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "No_Button"));
     private final By Commitment_Field = By.xpath("//android.widget.EditText");
     private final By Preferred_Amount_Field = By.xpath("//android.widget.EditText");
-    private final By Ok_And_Continue_Button = By.xpath("//android.widget.Button[@content-desc=\"Ok, Commit And Continue\"]");
+    private final By Ok_And_Continue_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Ok_And_Continue_Button"));
     private final By Products_Search_Page_Title = By.xpath("//android.widget.ImageView[@content-desc=\"Products for you\n" +
             "Change\"]");
     private final By Credit_Limit_Title = By.xpath("//android.view.View[@content-desc=\"The Credit Limit\"]");
@@ -25,7 +29,7 @@ public class Walkthrough {
 
 
 
-    public Walkthrough(AppiumDriver driver){
+    public Walkthrough(AppiumDriver driver) throws FileNotFoundException {
         this.driver= driver;
     }
 

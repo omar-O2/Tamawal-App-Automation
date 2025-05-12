@@ -10,7 +10,7 @@
   "Number_Eight": "Pincode\n8",
   "Number_Nine": "Pincode\n9",
   "Number_Zero": "Pincode\n0",
-"Enable_Biometrics_Button" : "//android.widget.Button[@content-desc=\"Enable\"]",
+ "Enable_Biometrics_Button" : "//android.widget.Button[@content-desc=\"Enable\"]",
   "Ignore_Biometrics_Button" : "//android.widget.Button[@content-desc=\"Ignore\"]"
 
 }

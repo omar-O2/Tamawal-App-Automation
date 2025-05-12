@@ -34,7 +34,7 @@ public class Engine_Test extends TestBase {
        // new OTP(driver).Press_On_OTP_Field().Enter_OTP();
         new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User1.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
-                .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User1.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
+                .Press_Next_Button().Press_No_Button().Press_No_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User1.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
                 .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Job"))
@@ -64,7 +64,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Press_On_OTP_Field().Enter_OTP();
         new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User2.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
-                .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User2.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
+                .Press_Next_Button().Press_No_Button().Press_No_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User2.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
                 .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Job"))
@@ -93,7 +93,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Press_On_OTP_Field().Enter_OTP();
         new PIN_Page_AND_Biometrics(driver).Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().Press_Ignore_Button();
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_Lets_Begin_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User3.Salary")).Press_Next_Button().Press_On_Select_Loan_Purpose().Select_Home_Improvement()
-                .Press_Next_Button().Press_No_Button().Press_Next_Button().Press_No_Button().Press_Next_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User3.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
+                .Press_Next_Button().Press_No_Button().Press_No_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User3.Preferred_Amount")).Press_Credit_Limit_Title().Press_Ok_And_Continue_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon().Press_On_Home_Page_Icon();
         new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Lets_Go_Button().Press_On_Job_Information_Field().Press_On_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
                 .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Job"))
