@@ -12,7 +12,8 @@ public class Home_Page {
     public AppiumDriver driver;
     private final By Logo_Tamawal = By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]");
     private final By Start_Discovery_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Start_Discovery_Button"));
-    private final By Details_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Details_Button"));
+    private final By Details_Button = By.xpath(Json_Data.Get_json_Data("Home_Page_Locators" , "Details_Button"));
+    // AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Details_Button"));
 
 
 
@@ -37,7 +38,8 @@ public void Press_Start_Discovery_Button(){
 }
 
 public Product_Details Press_On_Details_Button() throws FileNotFoundException, InterruptedException {
-        Utility.Scroll_Down(driver);
+
+    Utility.Scroll_Down(driver);
         Utility.Click_On_Element(driver, Details_Button);
         return new Product_Details(driver);
 }

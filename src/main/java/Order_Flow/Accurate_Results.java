@@ -31,7 +31,7 @@ public class Accurate_Results {
         this.driver=driver;
     }
     public Accurate_Results Press_On_TAMAWAL_In_Accurate(){
-        Utility.scrollToText(driver, "TAMAWAL");
+        Utility.scroll_To_Text(driver, "TAMAWAL");
         Utility.Click_On_Element(driver, TAMAWAL_Button_In_Accurate);
         return this;
 
