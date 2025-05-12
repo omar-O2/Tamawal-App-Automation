@@ -1,0 +1,33 @@
+{
+"Lets_Go_Button" : "OK, let’s go!",
+  "Job_Information_Field" : "Job info\nJob info\nNeed to fill",
+  "Yes_Button" : "Radio 1\nYes",
+  "No_Button" : "Radio 2\nNo",
+  "Next_Button" : "Next",
+  "Cancel_Button" : "Cancel",
+  "Sector_DDL" : "//android.widget.EditText",
+"Government_In_Sector_DDL" : "Government",
+  "Entity_DDL" : "//android.widget.EditText",
+"MinistryOfTransportation_In_Entity_DDL" : "Ministry of Transportation",
+  "Job_DDL" : "//android.widget.EditText",
+"Security_Man_In_Job_DDL" : "Security Jobs - Security Man",
+  "City_DDL" : "//android.widget.EditText",
+  "Abha_In_City_DDL" : "Abha",
+  "Bank_DDL" : "//android.widget.EditText",
+  "Alinma_In_Bank_DDL" : "Alinma Bank",
+  "Date_Field" : "//android.widget.EditText",
+  "Year_Button_Calender" : "Select year",
+  "Year_2020" : "2020",
+  "OK_Button_In_Date_Field" : "OK",
+"Ok_Confirm_Button" : "Ok, Confirm",
+  "Back_To_Summary_Button" : "Back to summary\nBack to Summary",
+  "Accept_Terms_And_Conditions_Checkbox" : "(//android.widget.ImageView[@content-desc=\"Checkbox\"])[1]",
+"Acknowledge_And_Undertake_That_All_My_Information_Is_Correct_And_My_Order_Will_Be_Canceled_In_Case_The_Information_Is_Incorrect_Checkbox" : "//android.view.View[@content-desc=\"I acknowledge and undertake that all my information is correct and my order will be canceled in case the information is incorrect\"]",
+  "I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox" : "//android.view.View[@content-desc=\"I hereby declare that the National ID & Date of Birth I have provided is correct & allow Tamawal to verify it. If ID is not correct I willl go to profile to disable this account & create new account with correct ID. If DoB is not correct, I will change DoB from profile.\"]",
+  "Confirm_All_Data_Button": "//android.widget.ScrollView/android.widget.ImageView[2]",
+"Pay_Now_Button" : "Pay Now!",
+  "Pay_With_Credit" : "International / Credit Cards\\nInternational / Credit Cards",
+
+
+
+}

@@ -15,7 +15,7 @@ public class Payment {
     private final By CVV_Of_Card = By.xpath("//android.view.View[@resource-id=\"mysr-form-form-el\"]/android.view.View[1]/android.view.View[3]/android.view.View[2]/android.widget.EditText[2]");
     private final By Pay_SAR_20_Button = By.xpath("//android.widget.Button[@text=\"Pay SAR 20.00\"]");
     private final By Submit_Button = By.xpath("//android.widget.Button[@text=\"Submit\"]");
-    private final By Continue_Button = By.xpath(Json_Data.Get_json_Data("Login_Locators"
+    private final By Continue_Button = By.xpath(Json_Data.Get_json_Data("Payment_Locators"
             ,"Continue_Button"));
 
 

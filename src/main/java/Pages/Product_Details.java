@@ -1,13 +1,17 @@
 package Pages;
 
 import Order_Flow.Application_Data;
+import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
+import java.io.FileNotFoundException;
+
 public class Product_Details {
     public AppiumDriver driver;
-    private final By Tamawal_Button = By.xpath("//android.widget.Button[@content-desc=\"Tamawal\"]");
+    private final By Tamawal_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Product_Details_Locators", "Tamawal_Button"));
 
 
 
@@ -15,12 +19,12 @@ public class Product_Details {
 
 
 
-    public Product_Details(AppiumDriver driver){
+    public Product_Details(AppiumDriver driver) throws FileNotFoundException {
         this.driver = driver;
     }
 
 
-    public Application_Data Press_On_Tamawal_Button(){
+    public Application_Data Press_On_Tamawal_Button() throws FileNotFoundException {
         Utility.Click_On_Element(driver, Tamawal_Button);
         return new Application_Data(driver);
 

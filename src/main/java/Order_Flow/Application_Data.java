@@ -1,6 +1,8 @@
 package Order_Flow;
 
+import Utilities.Json_Data;
 import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
@@ -8,36 +10,39 @@ import java.io.FileNotFoundException;
 
 public class Application_Data {
     public AppiumDriver driver;
-    private final By Lets_Go_Button = By.xpath("//android.widget.Button[@content-desc=\"Ok, let’s go!\"]");
+    private final By Lets_Go_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Lets_Go_Button"));
 
-    private final By Job_Information_Field = By.xpath("//android.view.View[@content-desc=\"Job info\n" +
-            "Need to fill\"]");
-    private final By Yes_Button = By.xpath("//android.view.View[@content-desc=\"Yes\"]");
-    private final By No_Button = By.xpath("//android.view.View[@content-desc=\"No\"]");
-    private final By Sector_DDL = By.xpath("//android.widget.EditText");
-    private final By Government_In_Sector_DDL = By.xpath("//android.view.View[@content-desc=\"Government\"]");
-    private final By Entity_DDL = By.xpath("//android.widget.EditText");
-    private final By MinistryOfTransportation_In_Entity_DDL = By.xpath("//android.view.View[@content-desc=\"Ministry of Transportation\"]");
-    private final By Job_DDL = By.xpath("//android.widget.EditText");
-    private final By Security_Man_In_Job_DDL = By.xpath("//android.view.View[@content-desc=\"Security Jobs - Security Man\"]");
-    private final By City_DDL = By.xpath("//android.widget.EditText");
-    private final By Abha_In_City_DDL = By.xpath("//android.view.View[@content-desc=\"Abha\"]");
-    private final By Bank_DDL = By.xpath("//android.widget.EditText");
-    private final By Alinma_In_Bank_DDL = By.xpath("//android.view.View[@content-desc=\"Alinma Bank\"]");
-    private final By Date_Field = By.xpath("//android.widget.EditText");
+    private final By Job_Information_Field = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Job_Information_Field"));
+    private final By Yes_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Yes_Button"));
+    private final By No_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "No_Button"));
+    private final By Sector_DDL = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Sector_DDL"));
+    private final By Government_In_Sector_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Government_In_Sector_DDL"));
+    private final By Entity_DDL = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Entity_DDL"));
+    private final By MinistryOfTransportation_In_Entity_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "MinistryOfTransportation_In_Entity_DDL"));
+    private final By Job_DDL = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Job_DDL"));
+    private final By Security_Man_In_Job_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Security_Man_In_Job_DDL"));
+    private final By City_DDL = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "City_DDL"));
+    private final By Abha_In_City_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Abha_In_City_DDL"));
+    private final By Bank_DDL = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Bank_DDL"));
+    private final By Alinma_In_Bank_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Alinma_In_Bank_DDL"));
+    private final By Date_Field = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Date_Field"));
     private final By Specific_Date = By.xpath("//android.widget.Button[@content-desc=\"22, Tuesday, April 22, 2025, Today\"]");
-    private final By Year_Button_Calender = By.xpath("//android.widget.Button[@content-desc=\"Select year\"]");
-    private final By Year_2020 = By.xpath("//android.widget.Button[@content-desc=\"2020\"]");
+    private final By Year_Button_Calender = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Year_Button_Calender"));
+    private final By Year_2020 = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Year_2020"));
 
 
-    private final By OK_Button_In_Date_Field = By.xpath("//android.widget.Button[@content-desc=\"OK\"]");
-    private final By Next_Button = By.xpath("//android.widget.Button[@content-desc=\"Next\"]");
-    private final By Cancel_Button = By.xpath("//android.widget.Button[@content-desc=\"Cancel\"]");
-    private final By Ok_Confirm_Button = By.xpath("//android.widget.Button[@content-desc=\"Ok, Confirm\"]");
-    private final By Back_To_Summary_Button = By.xpath("//android.view.View[@content-desc=\"Back to Summary\"]");
-    private final By Confirm_All_Data_Button = By.xpath("//android.widget.ScrollView/android.widget.ImageView[2]");
-    private final By Pay_Now_Button = By.xpath("//android.widget.Button[@content-desc=\"Pay Now!\"]");
-    private final By Pay_With_Credit = By.xpath("//android.view.View[@content-desc=\"International / Credit Cards\"]");
+    private final By OK_Button_In_Date_Field = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "OK_Button_In_Date_Field"));
+    private final By Next_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Next_Button"));
+    private final By Cancel_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Cancel_Button"));
+    private final By Ok_Confirm_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Ok_Confirm_Button"));
+    private final By Back_To_Summary_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Back_To_Summary_Button"));
+    private final By Accept_Terms_And_Conditions_Checkbox = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Accept_Terms_And_Conditions_Checkbox"));
+    private final By Acknowledge_And_Undertake_That_All_My_Information_Is_Correct_And_My_Order_Will_Be_Canceled_In_Case_The_Information_Is_Incorrect = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Acknowledge_And_Undertake_That_All_My_Information_Is_Correct_And_My_Order_Will_Be_Canceled_In_Case_The_Information_Is_Incorrect"));
+    private final By   I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox
+            = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", " I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox"));
+    private final By Confirm_All_Data_Button = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Confirm_All_Data_Button"));
+    private final By Pay_Now_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_Now_Button"));;
+    private final By Pay_With_Credit = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_With_Credit"));
     private final By TAMAWAL_Button = By.xpath("//android.widget.Button[@content-desc=\"TAMAWAL\"]");
 
 
@@ -45,7 +50,7 @@ public class Application_Data {
 
 
 
-    public Application_Data(AppiumDriver driver) {
+    public Application_Data(AppiumDriver driver) throws FileNotFoundException {
         this.driver = driver;
     }
 
