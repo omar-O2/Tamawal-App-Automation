@@ -1,8 +1,5 @@
 package Utilities;
 
-
-
-
 import Pages.AppiumInitializer;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
@@ -46,6 +43,8 @@ public class Utility {
         int centerX = size.getWidth() / 2;
         int startY = (int) (size.getHeight() * 0.8);
         int endY = (int) (size.getHeight() * 0.2);
+
+
 
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence scroll = new Sequence(finger, 4);
@@ -220,6 +219,44 @@ public class Utility {
     }
     /// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+    public static void Scroll_Vertical_To_Element(AppiumDriver driver, boolean scrollDown, By elementLocator, int maxSwipes) {
+        for (int i = 0; i < maxSwipes; i++) {
+            try {
+                // Check if element is visible
+                if (driver.findElement(elementLocator).isDisplayed()) {
+                    System.out.println("Element found after " + i + " swipes!");
+                    return;
+                }
+            } catch (NoSuchElementException e) {
+                // Element not found - perform vertical swipe
+                Dimension size = driver.manage().window().getSize();
+                int centerX = size.getWidth() / 2;
+                int startY = scrollDown ? (int)(size.getHeight() * 0.8) : (int)(size.getHeight() * 0.2);
+                int endY = scrollDown ? (int)(size.getHeight() * 0.2) : (int)(size.getHeight() * 0.8);
+
+                PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+                Sequence scroll = new Sequence(finger, 0);
+
+                scroll.addAction(finger.createPointerMove(Duration.ZERO,
+                        PointerInput.Origin.viewport(), centerX, startY));
+                scroll.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+                scroll.addAction(finger.createPointerMove(Duration.ofMillis(800),
+                        PointerInput.Origin.viewport(), centerX, endY));
+                scroll.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+                driver.perform(Collections.singletonList(scroll));
+
+                // Small delay between swipes
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+        throw new RuntimeException("Element not found after " + maxSwipes + " swipes!");
+    }
 
 }
 
