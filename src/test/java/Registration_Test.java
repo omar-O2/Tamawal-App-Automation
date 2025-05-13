@@ -28,7 +28,7 @@ public class Registration_Test extends TestBase {
 
 @Test
         public void Valid_Registration_With_NationalID() throws FileNotFoundException, InterruptedException {
-            new Registration(driver).Press_On_NationalID().Enter_NationalID("1011111166").Press_On_Title_Login().Press_Continue_Button().Press_On_Mobile_Number_Field();
+            new Registration(driver).Press_On_NationalID().Enter_NationalID("1005530090").Press_On_Title_Login().Press_Continue_Button().Press_On_Mobile_Number_Field();
 new Registration(driver).Enter_Mobile_Number("512345678").Press_On_Title_Registration().Press_On_Join_Now_Button().Press_On_Terms_And_Conditions_Check_Box().Press_Continue_Button();
 new OTP(driver).Press_On_OTP_Field().Enter_OTP();new Registration(driver).Press_Continue_Button().Press_On_Go_To_Nafath_Button().Return_To_App().Press_On_Set_PIN_Button().Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four().
 Press_Number_One().Press_Number_Two().Press_Number_Three().Press_Number_Four();
