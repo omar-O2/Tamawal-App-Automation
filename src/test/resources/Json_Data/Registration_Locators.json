@@ -1,0 +1,14 @@
+{
+  "Mobile_Number_Field" : "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.widget.EditText[2]",
+"Mobile_Number_Field_After_Press" : "//android.widget.ScrollView/android.widget.EditText[2]",
+  "Title_Login" : "Log in or Sign up",
+  "Title_Registration" : "Sign up",
+  "Join_Now_Button" : "Join Now",
+  "Terms_And_Conditions_Check_Box" : "Checkbox",
+  "Go_To_Nafath_Button" : "(//android.widget.Button[@content-desc=\"Go to Nafath App\"])[2]",
+  "Tamawal_Contract_Checkbox_1" : "(//android.widget.ImageView[@content-desc=\"Checkbox\"])[1]",
+  "Tamawal_Contract_Checkbox_2" : "(//android.widget.ImageView[@content-desc=\"Checkbox\"])[2]",
+
+  "Disagree_And_Back_Button" : "Disagree & back"
+
+}
