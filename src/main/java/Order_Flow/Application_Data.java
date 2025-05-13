@@ -195,8 +195,8 @@ public class Application_Data {
 
 
     public Application_Data Press_On_Confirm_All_Data_Button() throws InterruptedException {
-        //Utility.Scroll_Down(driver);
-        Utility.scroll_To_Text(driver,"I confirm that all data above are correct");
+
+        Utility.Scroll_Vertical_To_Element(driver, true, Confirm_All_Data_Button, 10);
         Utility.Click_On_Element(driver, Confirm_All_Data_Button);
         return this;
 
