@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="ss">
-    <suite-files>
-        <suite-file path="2025.xml">
-
-        </suite-file>
-    </suite-files>
-</suite>
