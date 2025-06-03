@@ -19,7 +19,7 @@ import java.util.Collections;
 
 
 public class Utility {
-    public static void Wait(AppiumDriver driver,By locator,Boolean Expected,String Message) {
+    public static void Assert (AppiumDriver driver,By locator,Boolean Expected,String Message) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Assert.assertEquals(
                 wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator)).isEmpty(),
