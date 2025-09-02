@@ -42,7 +42,6 @@ public class Application_Data {
           //  = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", " I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox"));
     private final By Confirm_Data_Provided_Is_Accurate = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Confirm_Data_Provided_Is_Accurate"));
     private final By Pay_Now_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_Now_Button"));;
-    private final By Pay_With_Credit = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_With_Credit"));
     private final By TAMAWAL_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "TAMAWAL_Button"));
 
 
@@ -196,7 +195,6 @@ public class Application_Data {
 
     public Application_Data Press_Confirm_Data_Provided_Is_Accurate() throws InterruptedException {
 
-        Utility.Scroll_Vertical_To_Element(driver, true, Confirm_Data_Provided_Is_Accurate, 10);
         Utility.Click_On_Element(driver, Confirm_Data_Provided_Is_Accurate);
         return this;
 
@@ -208,11 +206,6 @@ public class Application_Data {
 
     }
 
-    public Payment Press_Pay_With_Credit() throws FileNotFoundException {
-        Utility.Click_On_Element(driver, Pay_With_Credit);
-        return new Payment(driver);
-
-    }
 
     public Application_Data Press_On_TAMAWAL_Button() throws FileNotFoundException {
         Utility.Click_On_Element(driver, TAMAWAL_Button);
