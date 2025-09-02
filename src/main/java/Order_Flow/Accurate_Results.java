@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 public class Accurate_Results {
     public AppiumDriver driver;
     private final By TAMAWAL_Button_In_Accurate = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Accurate_Results_Locators", "TAMAWAL_Button_In_Accurate"));
-    private final By Track_Order_Button = By.xpath("//android.widget.Button[@content-desc=\"Track order\"]");
+    private final By Track_Order_Button = By.xpath("(//android.widget.Button[@content-desc=\"Track Order\"])[2]");
 
 
 
@@ -31,7 +31,6 @@ public class Accurate_Results {
         this.driver=driver;
     }
     public Accurate_Results Press_On_TAMAWAL_In_Accurate(){
-        Utility.scroll_To_Text(driver, "TAMAWAL");
         Utility.Click_On_Element(driver, TAMAWAL_Button_In_Accurate);
         return this;
 

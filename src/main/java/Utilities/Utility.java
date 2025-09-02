@@ -11,18 +11,38 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.Collections;
 
+
+
 public class Utility {
+    public static void Assert (AppiumDriver driver,By locator,Boolean Expected,String Message) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Assert.assertEquals(
+                wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator)).isEmpty(),
+                Expected,Message);
+
+    }
+
 
 
     public static void Click_On_Element(AppiumDriver driver, By locator) {
 
+        new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.visibilityOfElementLocated(locator));
 
         new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
+
+    }
+
+    public static void Element_Appears(AppiumDriver driver, By locator) {
+
+
+        new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(locator));
+
 
     }
 

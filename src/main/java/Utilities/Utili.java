@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -27,6 +28,13 @@ public class Utili {
 
         new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(locator));
         driver.findElement(locator).sendKeys(sss);
+
+    }
+    public static void Wait(AppiumDriver driver,By locator,Boolean Expected,String Message) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Assert.assertEquals(
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator)).isEmpty(),
+                Expected,Message);
 
     }
 }

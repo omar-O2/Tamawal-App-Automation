@@ -11,19 +11,17 @@ import java.io.FileNotFoundException;
 public class Walkthrough {
     public AppiumDriver driver;
     private final By Start_Discovery_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Home_Page_Locators", "Start_Discovery_Button"));
-    private final By Lets_Begin_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Lets_Begin_Button"));
     private final By Salary_Field = By.xpath("//android.widget.EditText");
-    private final By Next_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Next_Button"));
-    private final By Select_Loan_Purpose = By.xpath("//android.widget.EditText");
+    private final By Select_Loan_Purpose = By.xpath("//android.widget.ScrollView/android.widget.ImageView[1]");
     private final By Loan_Purpose_DDL = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Loan_Purpose_DDL"));
     private final By Yes_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Yes_Button"));
-    private final By No_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "No_Button"));
+    private final By No_Button = By.xpath(Json_Data.Get_json_Data("Walkthrough_Locators", "No_Button"));
     private final By Commitment_Field = By.xpath("//android.widget.EditText");
     private final By Preferred_Amount_Field = By.xpath("//android.widget.EditText");
-    private final By Ok_And_Continue_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Walkthrough_Locators", "Ok_And_Continue_Button"));
     private final By Products_Search_Page_Title = By.xpath("//android.widget.ImageView[@content-desc=\"Products for you\n" +
             "Change\"]");
-    private final By Credit_Limit_Title = By.xpath("//android.view.View[@content-desc=\"The Credit Limit\"]");
+    private final By Loan_Period = By.xpath(Json_Data.Get_json_Data("Walkthrough_Locators","Loan_Period"));
+    private final By Tamawal_Button = By.xpath("//android.widget.Button[@content-desc=\"Tamawal\"]");
 
 
 
@@ -40,11 +38,7 @@ public class Walkthrough {
     }
 
 
-    public Walkthrough Press_Lets_Begin_Button(){
 
-        Utility.Click_On_Element(driver, Lets_Begin_Button);
-        return this;
-    }
 
     public Walkthrough Press_On_Salary_Field(){
 
@@ -58,7 +52,7 @@ public class Walkthrough {
         return this;
 
     }
-    public Walkthrough Select_Home_Improvement(){
+    public Walkthrough Choose_Loan_Purpose(){
 
         Utility.Click_On_Element(driver, Loan_Purpose_DDL);
         return this;
@@ -72,14 +66,9 @@ public class Walkthrough {
         return this;
 
     }
-    public Walkthrough Press_Next_Button(){
 
-        Utility.Click_On_Element(driver, Next_Button);
-        return this;
-
-    }
     public Walkthrough Press_No_Button(){
-
+        Utility.Click_On_Element(driver, By.xpath("//android.view.View[@content-desc=\"Do you have active loans?\"]"));
         Utility.Click_On_Element(driver, No_Button);
         return this;
 
@@ -97,24 +86,21 @@ public class Walkthrough {
 
     }
 
-    public Walkthrough Press_Ok_And_Continue_Button(){
 
-        Utility.Click_On_Element(driver, Ok_And_Continue_Button);
+
+    public Walkthrough Choose_Loan_Period() {
+
+        Utility.Click_On_Element(driver, Loan_Period);
         return this;
 
-    }
-    public Walkthrough Press_Credit_Limit_Title(){
 
-        Utility.Click_On_Element(driver, Credit_Limit_Title);
+    }
+    public Walkthrough Scroll_To_Tamawal_Button() throws InterruptedException {
+        Thread.sleep(2000);
+        Utility.Scroll_Vertical_To_Element(driver,true,Tamawal_Button,3);
         return this;
 
+
     }
-
-
-
-
-
-
-
 
 }
