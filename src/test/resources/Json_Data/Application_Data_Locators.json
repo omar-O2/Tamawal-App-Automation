@@ -26,7 +26,6 @@
   "I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox" : "//android.view.View[@content-desc=\"I hereby declare that the National ID & Date of Birth I have provided is correct & allow Tamawal to verify it. If ID is not correct I willl go to profile to disable this account & create new account with correct ID. If DoB is not correct, I will change DoB from profile.\"]",
   "Confirm_Data_Provided_Is_Accurate": "//android.widget.ImageView[@content-desc=\"Checkbox\"]",
 "Pay_Now_Button" : "Pay Now!",
-  "Pay_With_Credit" : "International / Credit Cards\nInternational / Credit Cards",
   "TAMAWAL_Button" : "Tamawal"
 
 
