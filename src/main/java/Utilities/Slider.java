@@ -23,10 +23,8 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import java.time.Duration;
 import java.util.*;
-
 import java.time.Duration;
 import java.util.Collections;
-
 import java.time.Duration;
 import java.util.Collections;
 import org.openqa.selenium.interactions.Sequence;
@@ -79,7 +77,7 @@ public class Slider {
               }
           }
       }*/
-    public static void slideUntilElementAppears(AppiumDriver driver) {
+    //public static void slideUntilElementAppears(AppiumDriver driver) {
        /* // Slider element
         WebElement slider = driver.findElement(AppiumBy.xpath(
                 "//android.view.View[@content-desc=\"Loan Amount Slider\"]"));
@@ -140,7 +138,7 @@ public class Slider {
         throw new RuntimeException("Element with content-desc '367,104' not found after " + maxAttempts + " swipes.");
     }*/
         // Wait for slider to be present
-        WebElement slider = driver.findElement(AppiumBy.accessibilityId("100.0, Loan Amount Slider"));
+      /*  WebElement slider = driver.findElement(AppiumBy.accessibilityId("100.0, Loan Amount Slider"));
 
 // Get slider dimensions
         Point sliderLocation = slider.getLocation();
@@ -178,7 +176,30 @@ public class Slider {
         } while (!cleanValue.equals("200000")); // Now cleanValue is accessible here
 
         System.out.println("Successfully set loan amount to ¥200,000");
-    }
+    }*/
+
+
+        public static void setSeekBarPercentage(AppiumDriver driver,int targetPercentage) {
+            // Locate the seekbar using accessibility ID
+            WebElement seekBar = driver.findElement(By.xpath("//android.widget.SeekBar[@content-desc=\"100%\"]"));
+
+            // Get seekbar dimensions
+            int startX = seekBar.getLocation().getX();
+            int endX = startX + seekBar.getSize().getWidth();
+            int yPos = seekBar.getLocation().getY() + (seekBar.getSize().getHeight() / 2);
+
+            // Calculate target position (ensure percentage is 0-100)
+            targetPercentage = Math.max(0, Math.min(100, targetPercentage));
+            int targetX = startX + ((endX - startX) * targetPercentage / 100);
+
+            // Perform the slide action
+            new TouchAction<>((PerformsTouchActions) driver)
+                    .press(PointOption.point(startX, yPos))
+                    .waitAction() // small pause
+                    .moveTo(PointOption.point(targetX, yPos))
+                    .release()
+                    .perform();
+        }
 }
 
 

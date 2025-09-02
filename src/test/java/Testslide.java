@@ -21,7 +21,7 @@ public class Testslide extends TestBase {
         driver.findElement(By.xpath("//android.view.View[@content-desc=\"icon1\"]/android.widget.ImageView")).click();
         Thread.sleep(6000);
         //Slider.slideUntilElementAppears(driver);
-        Slider.slideUntilElementAppears(driver);
+        Slider.setSeekBarPercentage(driver,50);
         Assert.assertEquals(
                 driver.findElements(By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]")).isEmpty(),
                 false,

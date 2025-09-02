@@ -31,9 +31,18 @@ public class Utility {
 
     public static void Click_On_Element(AppiumDriver driver, By locator) {
 
+        new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.visibilityOfElementLocated(locator));
 
         new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
+
+    }
+
+    public static void Element_Appears(AppiumDriver driver, By locator) {
+
+
+        new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(locator));
+
 
     }
 

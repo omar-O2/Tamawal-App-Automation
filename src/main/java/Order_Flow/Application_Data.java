@@ -40,7 +40,7 @@ public class Application_Data {
     private final By Acknowledge_And_Undertake_That_All_My_Information_Is_Correct_And_My_Order_Will_Be_Canceled_In_Case_The_Information_Is_Incorrect = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Acknowledge_And_Undertake_That_All_My_Information_Is_Correct_And_My_Order_Will_Be_Canceled_In_Case_The_Information_Is_Incorrect_Checkbox"));
     //private final By I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox
           //  = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", " I_Hereby_Declare_That_The_NationalID_Date_Of_Birth_I_Have_Provided_Is_Correct_Allow_Tamawal_to_Verify_It_If_ID_Is_Not_Correct_I_Will_Go_To_Profile_To_Disable_This_Account_Create_New_Account_With_Correct_ID_If_DoB_Is_Not_Correct_I_Will_Change_DoB_From_Profile_Checkbox"));
-    private final By Confirm_All_Data_Button = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Confirm_All_Data_Button"));
+    private final By Confirm_Data_Provided_Is_Accurate = By.xpath(Json_Data.Get_json_Data("Application_Data_Locators", "Confirm_Data_Provided_Is_Accurate"));
     private final By Pay_Now_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_Now_Button"));;
     private final By Pay_With_Credit = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_With_Credit"));
     private final By TAMAWAL_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "TAMAWAL_Button"));
@@ -194,10 +194,10 @@ public class Application_Data {
     }
 
 
-    public Application_Data Press_On_Confirm_All_Data_Button() throws InterruptedException {
+    public Application_Data Press_Confirm_Data_Provided_Is_Accurate() throws InterruptedException {
 
-        Utility.Scroll_Vertical_To_Element(driver, true, Confirm_All_Data_Button, 10);
-        Utility.Click_On_Element(driver, Confirm_All_Data_Button);
+        Utility.Scroll_Vertical_To_Element(driver, true, Confirm_Data_Provided_Is_Accurate, 10);
+        Utility.Click_On_Element(driver, Confirm_Data_Provided_Is_Accurate);
         return this;
 
     }
