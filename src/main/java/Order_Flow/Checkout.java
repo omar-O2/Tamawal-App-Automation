@@ -11,9 +11,9 @@ import java.io.FileNotFoundException;
 public class Checkout{
 public AppiumDriver driver;
 
-private final By Confirmation_Checkbox = AppiumBy.accessibilityId("Checkbox");
-    private final By Pay_Now_Button = AppiumBy.accessibilityId("Pay Now");
-    private final By Pay_With_Credit = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Application_Data_Locators", "Pay_With_Credit"));
+private final By Confirmation_Checkbox = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Checkout_Locators","Confirmation_Checkbox"));
+    private final By Pay_Now_Button = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Checkout_Locators","Pay_Now_Button"));
+    private final By Pay_With_Credit = AppiumBy.accessibilityId(Json_Data.Get_json_Data("Checkout_Locators", "Pay_With_Credit"));
 
 
 
