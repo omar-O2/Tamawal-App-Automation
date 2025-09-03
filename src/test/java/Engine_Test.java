@@ -7,6 +7,7 @@ import Order_Flow.Payment;
 import Order_Flow.Walkthrough;
 import Pages.*;
 import Utilities.Json_Data;
+import Utilities.Utility;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -46,13 +47,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
 
@@ -78,12 +73,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -108,14 +98,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -139,13 +122,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
 
@@ -171,13 +148,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -202,14 +173,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -234,12 +198,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -264,13 +223,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -294,13 +247,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -324,13 +271,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -354,13 +295,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -384,13 +319,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -414,12 +343,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -444,12 +368,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -474,12 +393,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -504,12 +418,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -534,13 +443,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -564,12 +467,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -594,13 +492,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -624,12 +516,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -654,12 +541,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -684,12 +566,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -714,12 +591,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -744,13 +616,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     @Test
@@ -774,13 +640,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     @Test
@@ -804,12 +664,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -834,12 +689,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -864,13 +714,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -894,13 +738,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -924,12 +762,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -954,12 +787,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -984,12 +812,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1014,12 +837,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1044,12 +862,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1074,13 +887,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -1104,12 +911,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1134,12 +936,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1164,13 +961,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -1194,12 +985,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1224,12 +1010,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1254,12 +1035,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1284,12 +1060,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1314,12 +1085,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1344,12 +1110,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1374,12 +1135,8 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
+
 
 
     }
@@ -1404,13 +1161,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -1434,12 +1185,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1465,12 +1211,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }
@@ -1495,13 +1236,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
     }
     //TODO: User salary equal and commitment equal and application data questions are
@@ -1525,12 +1260,7 @@ public class Engine_Test extends TestBase {
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
+        Utility.Assert(driver,By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
 
 
     }

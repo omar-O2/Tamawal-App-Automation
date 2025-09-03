@@ -3,6 +3,8 @@ import Authentication.OTP;
 import Order_Flow.*;
 import Pages.*;
 import Utilities.Json_Data;
+import Utilities.Utility;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -86,13 +88,7 @@ public class Order_Flow_Test extends TestBase {
         new OTP(driver).Enter_OTP();
        new Accurate_Results(driver).Press_Track_Order_Button();
 
-        Thread.sleep(3000);
-        Assert.assertEquals(
-                driver.findElements(By.xpath("//android.view.View[@content-desc=\"Tracking\"]")).isEmpty(),
-                false,
-                "No EditText elements found"
-        );
-
+        Utility.Assert(driver, By.xpath("//android.view.View[@content-desc=\"Tracking\"]"),false,"Yess");
 
     }
 }
