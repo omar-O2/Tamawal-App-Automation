@@ -23,7 +23,7 @@ public class Order_Flow_Test extends TestBase {
         new Login_Flow_Page(driver).Press_Skip_Button();
         new Login_Flow_Page(driver).Press_Join_Button();
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button().Press_Number_One().
-                Press_Number_Two().Press_Number_Three().Press_Number_Four();//.Press_Ignore_Button();
+                Press_Number_Two().Press_Number_Three().Press_Number_Four();
 
     }
     @Test //TODO: When user is logged in to app for first time after registration

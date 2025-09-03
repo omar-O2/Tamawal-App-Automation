@@ -1,25 +1,19 @@
 import Authentication.OTP;
 import Authentication.PIN_Page_AND_Biometrics;
-import Authentication.Registration;
-import Order_Flow.Accurate_Results;
-import Order_Flow.Application_Data;
-import Order_Flow.Payment;
-import Order_Flow.Walkthrough;
 import Pages.*;
 import Authentication.Login_Flow_Page;
 import Utilities.Json_Data;
 import Utilities.Utility;
-import io.appium.java_client.AppiumBy;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
+import io.qameta.allure.TmsLink;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
 import java.io.FileNotFoundException;
-import java.time.Duration;
 
 public class Login_FLow_Test extends TestBase {
 
@@ -38,10 +32,14 @@ public class Login_FLow_Test extends TestBase {
 
 
     @Test(priority = 1)
+    @Epic("Login")
+    @TmsLink("https://team-1591718611727.atlassian.net/jira/software/c/projects/TM/boards/33")
+    @Owner("Mahmoud")
+    @Description("kdkfk")
     public void Valid_Login_With_NationalID() throws InterruptedException, FileNotFoundException {
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Login", "NationalIDText")).Press_On_Title().Press_Continue_Button().Press_Number_One().Press_Number_Two()
                 .Press_Number_Three().Press_Number_Four();
-        Utility.Assert(driver, By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[2]"),false,"Yess");
+        Utility.Assert(driver, By.xpath("//android.widget.ScrollView/android.view.View[1]/android.widget.ImageView[1]"),false,"Yess");
 
 
     }
