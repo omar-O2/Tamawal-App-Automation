@@ -8,6 +8,7 @@ import Order_Flow.Walkthrough;
 import Pages.*;
 import Utilities.Json_Data;
 import Utilities.Utility;
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -868,6 +869,7 @@ public class Engine_Test extends TestBase {
     }
     //TODO: User salary equal and commitment equal and application data questions are
     @Test
+
     public void User_Thirty_Five_Case() throws FileNotFoundException, InterruptedException {
         new Login_Flow_Page(driver).Press_On_NationalID().Enter_NationalID(Json_Data.Get_json_Data("Engine_Test", "User35.NationalID")).Press_On_Title().Press_Continue_Button();
         new OTP(driver).Press_On_OTP_Field().Enter_OTP();
