@@ -83,7 +83,7 @@ public void Press_Start_Discovery_Button(){
 public Product_Details Press_On_Details_Button() throws FileNotFoundException, InterruptedException {
 
     //Utility.Scroll_Down(driver);
-    Utility.Scroll_Vertical_To_Element(driver,true,Details_Button,10);
+    Utility.Scroll_Vertical_To_Element(driver,true,Details_Button,20);
         Utility.Click_On_Element(driver, Details_Button);
         return new Product_Details(driver);
 }

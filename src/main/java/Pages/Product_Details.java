@@ -1,6 +1,6 @@
 package Pages;
 
-import Order_Flow.Application_Data;
+import Order_Flow.Disclosures.Personal_Details;
 import Utilities.Json_Data;
 import Utilities.Utility;
 import io.appium.java_client.AppiumBy;
@@ -24,9 +24,9 @@ public class Product_Details {
     }
 
 
-    public Application_Data Press_On_Tamawal_Button() throws FileNotFoundException {
+    public Personal_Details Press_On_Tamawal_Button() throws FileNotFoundException {
         Utility.Click_On_Element(driver, Tamawal_Button);
-        return new Application_Data(driver);
+        return new Personal_Details(driver);
 
     }
 
