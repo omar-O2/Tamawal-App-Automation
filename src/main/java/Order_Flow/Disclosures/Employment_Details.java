@@ -57,7 +57,7 @@ public class Employment_Details {
 
     public Employment_Details Enter_Sector_Data(String Sector) {
         Utility.Send_Data(driver, Sector_DDL, Sector);
-        Utility.Click_On_Element(driver, Government_In_Sector_DDL);
+        Utility.Click_On_Element (driver, Government_In_Sector_DDL);
         return this;
 
 
