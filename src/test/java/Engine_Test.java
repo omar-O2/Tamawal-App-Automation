@@ -3,6 +3,8 @@ import Authentication.OTP;
 import Authentication.PIN_Page_AND_Biometrics;
 import Order_Flow.Accurate_Results;
 import Order_Flow.Checkout;
+import Order_Flow.Disclosures.Disclosure_Landing;
+import Order_Flow.Disclosures.Personal_Details;
 import Order_Flow.Payment;
 import Order_Flow.Walkthrough;
 import Pages.*;
@@ -34,12 +36,12 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User1.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User1.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User1.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
-        new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL()
+                .Press_On_Confirm_And_Next_Button();
+               new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+              new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
                new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -60,12 +62,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User2.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User2.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User2.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User2.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -85,12 +86,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User3.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User3.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User3.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User3.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -109,12 +109,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User4.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User4.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User4.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User4.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User4.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User4.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User4.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -135,12 +134,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User5.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User5.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User5.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User1.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User5.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User5.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -160,12 +158,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User6.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User6.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User6.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User6.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User6.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User6.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User6.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -185,12 +182,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -210,12 +206,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User8.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User8.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User8.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User8.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User8.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User8.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User8.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -234,12 +229,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User9.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User9.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User9.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User9.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User9.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User9.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User9.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -258,12 +252,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User10.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User10.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User10.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User10.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User10.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User10.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -282,12 +275,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -306,12 +298,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -330,12 +321,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -355,12 +345,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -380,12 +369,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -405,12 +393,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -430,12 +417,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -454,12 +440,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -479,12 +464,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -503,12 +487,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -528,12 +511,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -553,12 +535,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -578,12 +559,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -603,12 +583,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -627,12 +606,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -651,12 +629,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -676,12 +653,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -701,12 +677,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -725,12 +700,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -749,12 +723,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -774,12 +747,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -799,12 +771,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -824,12 +795,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -849,12 +819,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -875,12 +844,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -899,12 +867,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -924,15 +891,13 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
-        new OTP(driver).Press_On_OTP_Field();
         new OTP(driver).Enter_OTP();
         new Accurate_Results(driver).Press_Track_Order_Button();
 
@@ -949,12 +914,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -973,12 +937,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -998,12 +961,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1023,12 +985,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1048,12 +1009,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1073,12 +1033,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1098,12 +1057,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1123,12 +1081,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1149,12 +1106,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1173,12 +1129,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1199,12 +1154,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1224,12 +1178,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();
@@ -1248,12 +1201,11 @@ public class Engine_Test extends TestBase {
         new Walkthrough(driver).Press_Start_Discovery_Button().Press_On_Salary_Field().Enter_Salary(Json_Data.Get_json_Data("Engine_Test", "User7.Salary")).Press_No_Button().Press_On_Select_Loan_Purpose().Choose_Loan_Purpose().Scroll_To_Tamawal_Button().Press_Preferred_Amount_Field().Enter_Preferred_Amount(Json_Data.Get_json_Data("Engine_Test", "User7.Preferred_Amount")).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button().Press_On_Job_Information_Field().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_Sector_DDL()
-                .Enter_Sector_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Sector")).Press_On_Next_Button().Press_On_Entity_DDL().Enter_Entity_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Entity")).Press_On_Next_Button().Press_On_Job_DDL().Enter_Job_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Job"))
-                .Press_On_Next_Button().Press_On_Fifth_Yes_Button().Press_On_Next_Button().Press_On_City_DDL().Enter_City_Data(Json_Data.Get_json_Data("Engine_Test", "User7.City")) .Press_On_Next_Button().Press_On_Bank_DDL().Enter_Bank_Data(Json_Data.Get_json_Data("Engine_Test", "User7.Bank")).Press_On_Next_Button()
-                .Press_On_Hiring_Date_Field().Choose_Date().Press_Ok_In_Date().Press_On_Next_Button().Press_Ok_Confirm_Button().Press_Back_To_Summary_Button().Press_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
+        new Home_Page(driver).Press_On_Details_Button().Press_On_Tamawal_Button();
+        new Personal_Details(driver).Click_On_Section_Personal_Details().Click_On_Social_Status_DDL().Choose_Single_In_Social_Status_DDL().Click_On_Number_1_in_DDLs().Click_On_Number_1_in_DDLs().Click_On_Amount_Entry_Field().Enter_Education_Amount().Press_On_Title_Of_Amount_Entry_Field().Press_On_Ok_Button_In_Amount_Entry_Field()
+                .Choose_Bank_Albilad().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Press_On_Yes_Button().Choose_Abha_City().Choose_Option_In_Education_Level_DDL().Choose_Option_In_Source_Of_Income_DDL().Choose_Option_In_Net_Worth_Category_DDL().Choose_Option_In_Current_Job_Professions_DDL().Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox().Press_On_Pay_Now_Button().Press_Pay_With_Credit();
-
         new Payment(driver).Press_On_Name_On_Card_Field().Enter_Name_On_Card("Omar Radwan").Press_On_Card_Number_Field().Enter_Card_Number("4111111111111111").Press_On_Month_Of_Card().Enter_Month_Of_Card("0828").Press_On_CVV_Of_Card().Enter_CVV_Of_Card("123").Press_On_Pay_SAR_20_Button().Press_On_Submit_Button()
                 .Press_On_Continue_Button().Press_On_TAMAWAL_In_Accurate();
         new OTP(driver).Press_On_OTP_Field();

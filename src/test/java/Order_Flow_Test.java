@@ -1,6 +1,7 @@
 import Authentication.Login_Flow_Page;
 import Authentication.OTP;
 import Order_Flow.*;
+import Order_Flow.Disclosures.Disclosure_Landing;
 import Order_Flow.Disclosures.Personal_Details;
 import Pages.*;
 import Utilities.Json_Data;
@@ -59,33 +60,12 @@ public class Order_Flow_Test extends TestBase {
         new Personal_Details(driver).Choose_Option_In_Source_Of_Income_DDL();
         new Personal_Details(driver).Choose_Option_In_Net_Worth_Category_DDL();
         new Personal_Details(driver).Choose_Option_In_Current_Job_Professions_DDL();
+        new Personal_Details(driver).Press_On_Confirm_And_Next_Button();
+        new Disclosure_Landing(driver).Press_On_Confirm_Data_Provided_Is_Accurate().Press_On_TAMAWAL_Button();
 
 
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_Sector_DDL();
-        new Personal_Details(driver).Enter_Sector_Data("Government");
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_Entity_DDL();
-        new Personal_Details(driver).Enter_Entity_Data("Ministry of Transportation");
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_Job_DDL();
-        new Personal_Details(driver).Enter_Job_Data("Security Jobs");
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_Fifth_Yes_Button();
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_City_DDL();
-        new Personal_Details(driver).Enter_City_Data("Abha");
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_Bank_DDL();
-        new Personal_Details(driver).Press_On_Next_Button();
-        new Personal_Details(driver).Press_On_Hiring_Date_Field();
-        new Personal_Details(driver).Choose_Date();
-        new Personal_Details(driver).Press_Ok_In_Date();
-        new Personal_Details(driver).Press_On_Next_Button();
+
         new Personal_Details(driver).Press_Ok_Confirm_Button();
-        new Personal_Details(driver).Press_Back_To_Summary_Button();
-        new Personal_Details(driver).Press_Confirm_Data_Provided_Is_Accurate();
-        new Personal_Details(driver).Press_On_TAMAWAL_Button();
         new Checkout(driver).Press_On_Confirmation_Checkbox();
         new Checkout(driver).Press_On_Pay_Now_Button().Press_Pay_With_Credit();
         new Payment(driver).Press_On_Name_On_Card_Field();
