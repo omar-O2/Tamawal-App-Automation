@@ -39,6 +39,7 @@ public class Products_List {
 
             if (driver.findElement(Close_Compare_Tour_Guide_Icon).isDisplayed()) {
                 Utility.Click_On_Element(driver, Close_Compare_Tour_Guide_Icon);
+                Utility.Click_On_Element(driver,Home_Page_Icon);
             }
         } catch (TimeoutException | NoSuchElementException e) {
             // Element not found within timeout, click home icon
