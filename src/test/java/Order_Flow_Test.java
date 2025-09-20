@@ -2,6 +2,7 @@ import Authentication.Login_Flow_Page;
 import Authentication.OTP;
 import Order_Flow.*;
 import Order_Flow.Disclosures.Disclosure_Landing;
+import Order_Flow.Disclosures.Employment_Details;
 import Order_Flow.Disclosures.Personal_Details;
 import Pages.*;
 import Utilities.Json_Data;
@@ -40,7 +41,7 @@ public class Order_Flow_Test extends TestBase {
       new Walkthrough(driver).Choose_Loan_Period();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Products_List(driver).Press_On_Close_Compare_Tour_Guide_Icon();
-       */ new Home_Page(driver).Press_On_Details_Button();
+       */new Home_Page(driver).Press_On_Details_Button();
         new Product_Details(driver).Press_On_Tamawal_Button();
         new Personal_Details(driver).Click_On_Section_Personal_Details();
         new Personal_Details(driver).Click_On_Social_Status_DDL();

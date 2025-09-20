@@ -278,6 +278,15 @@ public class Utility {
         throw new RuntimeException("Element not found after " + maxSwipes + " swipes!");
     }
 
+    public static void Searching (AppiumDriver driver,By locator,String Search_Data) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        new WebDriverWait(driver, Duration.ofSeconds(45)).until(ExpectedConditions.elementToBeClickable(locator));
+        driver.findElement(locator).click();
+        driver.findElement(locator).sendKeys(Search_Data);
+
+
+    }
+
 }
 
 
