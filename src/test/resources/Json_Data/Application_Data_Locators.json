@@ -41,12 +41,12 @@
 "MinistryOfTransportation_In_Entity_DDL" : "Ministry of Transportation",
   "Job_Title_DDL" : "Job Title",
 "Security_Man_In_Job_DDL" : "Security Jobs - Security Man",
-  "City_DDL" : "City\\n*",
+  "City_DDL" : "City\n*",
   "Abha_In_City_DDL" : "Abha",
   "Bank_DDL" : "Salary Bank\n*",
   "Albilad_In_Bank_DDL" : "Albilad",
   "Date_Field" : "Hiring Date\n*",
-  "Year_Button_Calender" : "Select year",
+  "Year_Button_Calender" : "Select year\nSeptember 2025",
   "Year_2020" : "2020",
   "OK_Button_In_Date_Field" : "OK",
 "Ok_Confirm_Button" : "Ok, Confirm",
@@ -57,6 +57,16 @@
   "Confirm_Data_Provided_Is_Accurate": "Checkbox",
 "Pay_Now_Button" : "Pay Now!",
   "TAMAWAL_Button" : "Tamawal",
-"Section_Employment_Details" : "Employment Details\\n0%\\n0/7\\nEmployment Details\\nOptional"
+"Section_Employment_Details" : "Employment Details\n0%\n0/7\nEmployment Details\nOptional",
+  "Basic_Salary_Amount_Field" : "Basic Salary Amount",
+  "Basic_Salary_Amount_Text" : "Basic Salary Amount",
+  "Add_Amount_Field" : "//android.widget.EditText",
+  "Add_Button" : "(//android.widget.Button[@content-desc=\"Add\"])[2]",
+  "Do_Not_Have_Button" : "Don’t have",
+  "Housing_Allowance_Field" : "Housing Allowance",
+  "Transportation_Allowance_Field"  : "Transportation Allowance",
+"Housing_Allowance_Text": "Housing Allowance",
+  "Transportation_Allowance_Text" : "Transportation Allowance"
+
 
 }
